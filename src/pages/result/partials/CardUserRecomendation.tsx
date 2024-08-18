@@ -13,13 +13,10 @@ function isFilledAll(matra: MATRA | undefined, butaWarna: BUTA_WARNA | undefined
   return matra !== undefined && butaWarna !== undefined && minus !== undefined;
 }
 
-function getRecomendations(matra: MATRA | undefined, butaWarna: BUTA_WARNA | undefined, minus: MINUS | undefined): string[][] {
+function getRecomendations(): string[][] {
   return [
-    ["anu", "anu"],
-    ["anu", "anu"],
-    ["anu", "anu"],
-    ["anu", "anu"],
-    ["anu", "anu"],
+    ["masih kosong", "masih kosong"],
+    ["masih kosong", "masih kosong"],
   ];
 }
 
@@ -27,7 +24,7 @@ function CardUserRecomendation() {
   const { matra, butaWarna, minus } = useContext(AppContext);
 
   const isFilled = isFilledAll(matra, butaWarna, minus);
-  const recomendations = getRecomendations(matra, butaWarna, minus);
+  const recomendations = getRecomendations();
 
   return (
     <Card>

@@ -4,9 +4,12 @@ import AppContext from "../../context/AppContext";
 import PAGES from "../../finals/basic/PAGES";
 
 import HomeHeader from "./partials/HomeHeader.tsx";
-import HomeDev from "./partials/HomeDev.tsx";
+// import HomeDev from "./partials/HomeDev.tsx";
+
+import Swal from "sweetalert2";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
+import Header from "../../partials/Header.tsx";
 
 function HomePage() {
   const { setPage } = useContext(AppContext);
@@ -14,9 +17,10 @@ function HomePage() {
   return (
     <>
       <HomeHeader />
+      <Header text="Aplikasi Pintar TNI Polri" />
 
       {/* Hanya ketika dev */}
-      <HomeDev />
+      {/*<HomeDev />*/}
 
       <ButtonNavigation
         button1={{
@@ -26,9 +30,12 @@ function HomePage() {
           },
         }}
         button2={{
-          text: "Tampilkan About",
+          text: "Kosong",
           action: () => {
-            setPage(PAGES.ABOUT);
+            Swal.fire({
+              icon: "error",
+              text: "Ups, halaman kosong"
+            });
           },
         }}
       />

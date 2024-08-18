@@ -15,8 +15,12 @@ function ResultPage() {
     <>
       <Header text="Halaman Result" />
 
+      {/* Menampilkan inputan user */}
       <CardUserInput />
+
       <div className="my-2" />
+
+      {/* Menampilkan rekomendasi */}
       <CardUserRecomendation />
 
       <ButtonNavigation
