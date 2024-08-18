@@ -11,13 +11,13 @@ type AppContextType = {
   page: PAGES;
   setPage: (page: PAGES) => void;
 
-  matra: MATRA | undefined;
+  matra: keyof typeof MATRA | undefined;
   setMatra: (matra: MATRA) => void;
 
-  butaWarna: BUTA_WARNA | undefined;
+  butaWarna: keyof typeof BUTA_WARNA | undefined;
   setButaWarna: (matra: BUTA_WARNA) => void;
 
-  minus: MINUS | undefined;
+  minus: keyof typeof MINUS | undefined;
   setMinus: (matra: MINUS) => void;
 };
 
