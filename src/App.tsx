@@ -1,8 +1,4 @@
-// import { useState } from "react";
-
 import "./App.css";
-
-import Swal from "sweetalert2";
 
 import PAGES from "./finals/basic/PAGES";
 import LOCAL_STORAGE_KEY from "./finals/basic/LOCAL_STORAGE_KEY";
@@ -19,13 +15,13 @@ import AboutPage from "./pages/about/AboutPage";
 import useStateMatra from "./hooks/useStateMatra.ts";
 import useStateButaWarna from "./hooks/useStateButaWarna.ts";
 
+import CheckMatra from "./pages/check/CheckMatraPage.tsx";
 import CheckButaWarnaPage from "./pages/check/CheckButaWarnaPage.tsx";
 import CheckMinusPage from "./pages/check/CheckMinusPage.tsx";
 
-import Footer from "./partials/Footer";
-import CheckMatra from "./pages/check/CheckMatraPage.tsx";
-
 import ResultPage from "./pages/result/ResultPage.tsx";
+
+import Footer from "./partials/Footer";
 
 function App() {
   const [page, setPage] = useStatePage();
@@ -38,18 +34,7 @@ function App() {
   // Menyimpan halaman aktif ke local storage
   useEffectSaveActivePage(page);
 
-  // Termasuk bertugas untuk menyimpan data "before-page"
   function changePage(data: PAGES) {
-    if (!data) {
-      Swal.fire({
-        icon: "error",
-        title: "Terjadi Kesalahan!",
-        text: "Halaman dimaksud tidak ditemukan",
-      }).then(() => changePage(PAGES.HOME));
-
-      return;
-    }
-
     localStorage.setItem(LOCAL_STORAGE_KEY.BEFORE_PAGE, page);
     setPage(data);
   }
@@ -81,6 +66,7 @@ function App() {
             <CheckMinusPage />
           )}
 
+          {/* Result */}
           {page === PAGES.RESULT && (
             <ResultPage />
           )}
