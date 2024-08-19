@@ -74,7 +74,7 @@ function App() {
             <ResultPage />
           )}
 
-          {page === PAGES.RECOMENDATION_1 && (
+          {page === PAGES.RECOMMENDATION_1 && (
             <Recomendation1 />
           )}
         </AppContext.Provider>

@@ -16,7 +16,7 @@ function isFilledAll(matra: MATRA | undefined, butaWarna: BUTA_WARNA | undefined
 
 function getRecommendations(): [string, PAGES][] {
   return [
-    ["Rekomendasi 1", PAGES.RECOMENDATION_1]
+    ["Rekomendasi 1", PAGES.RECOMMENDATION_1]
   ];
 }
 
