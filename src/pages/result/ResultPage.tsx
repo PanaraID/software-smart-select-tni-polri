@@ -4,7 +4,7 @@ import AppContext from "../../context/AppContext.tsx";
 import Header from "../../partials/Header.tsx";
 
 import CardUserInput from "./partials/CardUserInput.tsx";
-import CardUserRecomendation from "./partials/CardUserRecomendation.tsx";
+import CardUserRecommendation from "./partials/CardUserRecommendation.tsx";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 import PAGES from "../../finals/basic/PAGES.ts";
@@ -22,7 +22,7 @@ function ResultPage() {
       <div className="my-2" />
 
       {/* Menampilkan rekomendasi */}
-      <CardUserRecomendation />
+      <CardUserRecommendation />
 
       <ButtonNavigation
         button1={{

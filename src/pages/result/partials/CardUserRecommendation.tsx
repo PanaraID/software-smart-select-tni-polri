@@ -1,4 +1,4 @@
-import { useContext} from "react";
+import {useContext} from "react";
 import AppContext from "../../../context/AppContext.tsx";
 
 import MATRA from "../../../finals/MATRA.ts";
@@ -14,17 +14,17 @@ function isFilledAll(matra: MATRA | undefined, butaWarna: BUTA_WARNA | undefined
   return matra !== undefined && butaWarna !== undefined && minus !== undefined;
 }
 
-function getRecomendations(): [string, PAGES][] {
+function getRecommendations(): [string, PAGES][] {
   return [
     ["Rekomendasi 1", PAGES.RECOMENDATION_1]
   ];
 }
 
-function CardUserRecomendation() {
+function CardUserRecommendation() {
   const {setPage, matra, butaWarna, minus} = useContext(AppContext);
 
   const isFilled = isFilledAll(matra, butaWarna, minus);
-  const recomendations = getRecomendations();
+  const recommendations = getRecommendations();
 
   return (
     <Card>
@@ -36,7 +36,7 @@ function CardUserRecomendation() {
           {!isFilled && <AllDataNotFilled/>}
 
           {/* Menampilkan rekomendasi */}
-          {isFilled && recomendations.map((value, index) => {
+          {isFilled && recommendations.map((value, index) => {
             return (
               <ListGroupItem key={index} className="d-flex justify-content-between align-items-center">
                 <span>{value[0]}</span>
@@ -50,4 +50,4 @@ function CardUserRecomendation() {
   );
 }
 
-export default CardUserRecomendation;
+export default CardUserRecommendation;
