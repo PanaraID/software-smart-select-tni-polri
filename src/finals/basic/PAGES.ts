@@ -7,6 +7,7 @@ enum PAGES {
   CHECK_MINUS = "CHECK-MINUS",
 
   RESULT = "RESULT",
+  RECOMENDATION_1 = "RECOMENDATION-1",
 }
 
 export default PAGES;

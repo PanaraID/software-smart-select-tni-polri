@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import {useContext} from "react";
 import AppContext from "../../context/AppContext.tsx";
 
 import Header from "../../partials/Header.tsx";
@@ -8,6 +8,7 @@ import CardUserRecomendation from "./partials/CardUserRecomendation.tsx";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 import PAGES from "../../finals/basic/PAGES.ts";
+
 function ResultPage() {
   const { setPage } = useContext(AppContext);
 
@@ -24,6 +25,10 @@ function ResultPage() {
       <CardUserRecomendation />
 
       <ButtonNavigation
+        button1={{
+          text: "Sebelumnya",
+          action: () => setPage(PAGES.CHECK_MINUS)
+        }}
         button2={{
           text: "Beranda",
           action: () => setPage(PAGES.HOME)

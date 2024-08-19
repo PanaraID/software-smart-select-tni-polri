@@ -22,6 +22,7 @@ import CheckMinusPage from "./pages/check/CheckMinusPage.tsx";
 import ResultPage from "./pages/result/ResultPage.tsx";
 
 import Footer from "./partials/Footer";
+import Recomendation1 from "./pages/result/recomendations/Recomendation1.tsx";
 
 function App() {
   const [page, setPage] = useStatePage();
@@ -69,6 +70,10 @@ function App() {
           {/* Result */}
           {page === PAGES.RESULT && (
             <ResultPage />
+          )}
+
+          {page === PAGES.RECOMENDATION_1 && (
+            <Recomendation1 />
           )}
         </AppContext.Provider>
       </main>

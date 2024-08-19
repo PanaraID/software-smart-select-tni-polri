@@ -3,6 +3,8 @@ import PAGES from "../../../finals/basic/PAGES";
 import HomeDevButton from "./partials/HomeDevButton";
 import { Button } from "react-bootstrap";
 
+// Menampilkan list button untuk mengakses semua halaman.
+// Hanya diperuntukkan untuk tahap pengembangan.
 function HomeDev() {
   const [isDisplay, setIsDisplay] = useState<boolean>(true);
 
