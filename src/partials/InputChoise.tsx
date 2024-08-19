@@ -6,8 +6,8 @@ type PropsType<T extends { [key: string]: string }> = {
   optionTitle?: string;
   enumType: T;
 
-  selected: string;
-  setSelected: (data: string) => void
+  selected: any;
+  setSelected: (data: any) => void
 };
 
 function InputChoice<T extends { [key: string]: string }>(props: PropsType<T>) {

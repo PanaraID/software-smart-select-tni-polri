@@ -7,6 +7,7 @@ import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage.ts";
 import useStatePage from "./hooks/basic/useStatePage.ts";
 
 import AppContext from "./context/AppContext";
+import AppContextType from "./context/AppContextType.ts";
 
 import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
@@ -14,6 +15,7 @@ import AboutPage from "./pages/about/AboutPage";
 // useState
 import useStateMatra from "./hooks/useStateMatra.ts";
 import useStateButaWarna from "./hooks/useStateButaWarna.ts";
+import useStateMinus from "./hooks/useStateMinus.ts";
 
 import CheckMatra from "./pages/check/CheckMatraPage.tsx";
 import CheckButaWarnaPage from "./pages/check/CheckButaWarnaPage.tsx";
@@ -30,7 +32,7 @@ function App() {
   // Check
   const [matra, setMatra] = useStateMatra();
   const [butaWarna, setButaWarna] = useStateButaWarna();
-  const [minus, setMinus] = useStateButaWarna();
+  const [minus, setMinus] = useStateMinus();
 
   // Menyimpan halaman aktif ke local storage
   useEffectSaveActivePage(page);
@@ -40,7 +42,7 @@ function App() {
     setPage(data);
   }
 
-  const context = {
+  const context: AppContextType = {
     page,
     setPage: changePage,
 
