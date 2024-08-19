@@ -6,15 +6,15 @@ type PropsType<T extends { [key: string]: string }> = {
   optionTitle?: string;
   enumType: T;
 
-  selected: any;
-  setSelected: (data: any) => void
+  selected: string;
+  setSelected: (data: string) => void
 };
 
 function InputChoice<T extends { [key: string]: string }>(props: PropsType<T>) {
   const { enumType, optionTitle, label, selected, setSelected } = props;
 
   function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    const value = event.target.value as keyof T;
+    const value: string = (event.target.value as keyof T).toString();
     setSelected(value);  // Pass the key to setSelected
   }
 
