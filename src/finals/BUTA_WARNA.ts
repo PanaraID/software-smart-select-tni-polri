@@ -1,6 +1,6 @@
 enum MINUS {
-  IYA = "Iya",
-  TIDAK = "Tidak",
+  IYA = "Iya Buta Warna",
+  TIDAK = "Tidak Buta Warna",
 }
 
 export default MINUS;
