@@ -23,6 +23,8 @@ function getRecomendations(): string[][] {
 function CardUserRecomendation() {
   const { matra, butaWarna, minus } = useContext(AppContext);
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   const isFilled = isFilledAll(matra, butaWarna, minus);
   const recomendations = getRecomendations();
 

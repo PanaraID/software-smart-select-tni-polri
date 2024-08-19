@@ -15,10 +15,10 @@ type AppContextType = {
   setMatra: (matra: MATRA) => void;
 
   butaWarna: keyof typeof BUTA_WARNA | undefined;
-  setButaWarna: (matra: BUTA_WARNA) => void;
+  setButaWarna: (butaWarna: BUTA_WARNA) => void;
 
   minus: keyof typeof MINUS | undefined;
-  setMinus: (matra: MINUS) => void;
+  setMinus: (minus: MINUS) => void;
 };
 
 const AppContext = createContext({} as AppContextType);
