@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY.ts";
 import BUTA_WARNA from "../finals/BUTA_WARNA.ts";

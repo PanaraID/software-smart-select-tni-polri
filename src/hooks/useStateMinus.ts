@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY.ts";
 import MINUS from "../finals/MINUS.ts";
