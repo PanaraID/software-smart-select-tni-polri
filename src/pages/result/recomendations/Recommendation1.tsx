@@ -1,7 +1,7 @@
 import Header from "../../../partials/Header.tsx";
 import ButtonNavigation from "../../../partials/button-navigation/ButtonNavigation.tsx";
 
-function Recomendation1() {
+function Recommendation1() {
   return (
     <>
       <Header text="Berdasarkan pilihan anda, maka jurusan ini yang cocok" />
@@ -10,4 +10,4 @@ function Recomendation1() {
   );
 }
 
-export default Recomendation1;
+export default Recommendation1;

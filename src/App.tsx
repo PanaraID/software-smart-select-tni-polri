@@ -9,23 +9,17 @@ import useStatePage from "./hooks/basic/useStatePage.ts";
 import AppContext from "./context/AppContext";
 import AppContextType from "./context/AppContextType.ts";
 
-import HomePage from "./pages/home/HomePage";
-import AboutPage from "./pages/about/AboutPage";
-
 // useState
 import useStateMatra from "./hooks/useStateMatra.ts";
 import useStateButaWarna from "./hooks/useStateButaWarna.ts";
 import useStateMinus from "./hooks/useStateMinus.ts";
 
-import CheckMatra from "./pages/check/CheckMatraPage.tsx";
-import CheckButaWarnaPage from "./pages/check/CheckButaWarnaPage.tsx";
-import CheckMinusPage from "./pages/check/CheckMinusPage.tsx";
-
-import ResultPage from "./pages/result/ResultPage.tsx";
+import ShowBasicPage from "./partials/app/ShowBasicPage.tsx";
+import ShowCheckPage from "./partials/app/ShowCheckPage.tsx";
+import ShowResultPage from "./partials/app/ShowResultPage.tsx";
+import ShowRecommendationPage from "./partials/app/ShowRecommendationPage.tsx";
 
 import Footer from "./partials/Footer";
-import Recomendation1 from "./pages/result/recomendations/Recomendation1.tsx";
-
 function App() {
   const [page, setPage] = useStatePage();
 
@@ -55,28 +49,10 @@ function App() {
     <>
       <main id="content" className="p-2 container card overflow-auto">
         <AppContext.Provider value={context}>
-          {page === PAGES.HOME && <HomePage />}
-          {page === PAGES.ABOUT && <AboutPage />}
-
-          {/* Check page */}
-          {page === PAGES.CHECK_MATRA && (
-            <CheckMatra />
-          )}
-          {page === PAGES.CHECK_BUTA_WARNA && (
-            <CheckButaWarnaPage />
-          )}
-          {page === PAGES.CHECK_MINUS && (
-            <CheckMinusPage />
-          )}
-
-          {/* Result */}
-          {page === PAGES.RESULT && (
-            <ResultPage />
-          )}
-
-          {page === PAGES.RECOMMENDATION_1 && (
-            <Recomendation1 />
-          )}
+          <ShowBasicPage page={page} />
+          <ShowCheckPage page={page} />
+          <ShowResultPage page={page} />
+          <ShowRecommendationPage page={page} />
         </AppContext.Provider>
       </main>
       <Footer />
