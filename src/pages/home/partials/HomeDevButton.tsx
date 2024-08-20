@@ -2,8 +2,8 @@ import { useContext } from "react";
 
 import { Button } from "react-bootstrap";
 
-import AppContext from "../../../../context/AppContext";
-import PAGES from "../../../../finals/basic/PAGES";
+import AppContext from "../../../context/AppContext";
+import PAGES from "../../../finals/basic/PAGES";
 
 type PropsType = {
   text: string;
