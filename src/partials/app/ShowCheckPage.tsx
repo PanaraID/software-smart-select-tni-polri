@@ -15,7 +15,7 @@ function ShowCheckPage(props: PropsType) {
     case PAGES.CHECK_BUTA_WARNA:
       return <CheckButaWarnaPage />;
     case PAGES.CHECK_MINUS:
-      return <CheckMinusPage />
+      return <CheckMinusPage />;
   }
 }
 

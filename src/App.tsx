@@ -33,15 +33,12 @@ function App() {
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
   useEffectSaveCheck(matra, butaWarna, minus);
-
-  function changePage(data: PAGES) {
-    localStorage.setItem(LOCAL_STORAGE_KEY.BEFORE_PAGE, page);
-    setPage(data);
-  }
-
+  
   const context: AppContextType = {
-    page,
-    setPage: changePage,
+    page, setPage: (data: PAGES) => {
+      localStorage.setItem(LOCAL_STORAGE_KEY.BEFORE_PAGE, page);
+      setPage(data);
+    },
 
     matra, setMatra,
     butaWarna, setButaWarna,

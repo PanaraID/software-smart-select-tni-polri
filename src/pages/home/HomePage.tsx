@@ -34,7 +34,7 @@ function HomePage() {
           action: () => {
             Swal.fire({
               icon: "error",
-              text: "Ups, halaman kosong"
+              text: "Ups, halaman kosong",
             });
           },
         }}
