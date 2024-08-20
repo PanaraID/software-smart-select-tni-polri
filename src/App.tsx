@@ -3,16 +3,18 @@ import "./App.css";
 import PAGES from "./finals/basic/PAGES";
 import LOCAL_STORAGE_KEY from "./finals/basic/LOCAL_STORAGE_KEY";
 
-import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage.ts";
-import useStatePage from "./hooks/basic/useStatePage.ts";
-
 import AppContext from "./context/AppContext";
 import AppContextType from "./context/AppContextType.ts";
 
 // useState
+import useStatePage from "./hooks/basic/useStatePage.ts";
 import useStateMatra from "./hooks/useStateMatra.ts";
 import useStateButaWarna from "./hooks/useStateButaWarna.ts";
 import useStateMinus from "./hooks/useStateMinus.ts";
+
+// useEffect
+import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage.ts";
+import useEffectSaveCheck from "./hooks/useEffectSaveCheck.ts";
 
 import ShowBasicPage from "./partials/app/ShowBasicPage.tsx";
 import ShowCheckPage from "./partials/app/ShowCheckPage.tsx";
@@ -28,8 +30,9 @@ function App() {
   const [butaWarna, setButaWarna] = useStateButaWarna();
   const [minus, setMinus] = useStateMinus();
 
-  // Menyimpan halaman aktif ke local storage
+  // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
+  useEffectSaveCheck(matra, butaWarna, minus);
 
   function changePage(data: PAGES) {
     localStorage.setItem(LOCAL_STORAGE_KEY.BEFORE_PAGE, page);

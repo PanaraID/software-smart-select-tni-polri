@@ -1,9 +1,8 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import AppContext from "../../context/AppContext.tsx";
 
 import Header from "../../partials/Header.tsx";
 
-import LOCAL_STORAGE_KEY from "../../finals/basic/LOCAL_STORAGE_KEY.ts";
 import PAGES from "../../finals/basic/PAGES.ts";
 import BUTA_WARNA from "../../finals/BUTA_WARNA.ts";
 
@@ -12,10 +11,6 @@ import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation.
 
 function CheckButaWarnaPage() {
   const { setPage, butaWarna, setButaWarna } = useContext(AppContext);
-
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY.BUTA_WARNA, butaWarna || "");
-  }, [butaWarna]);
 
   return (
     <>

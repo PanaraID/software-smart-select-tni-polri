@@ -1,4 +1,4 @@
-import {useContext, useEffect} from "react";
+import { useContext } from "react";
 
 import AppContext from "../../context/AppContext.tsx";
 
@@ -8,14 +8,9 @@ import MINUS from "../../finals/MINUS.ts";
 import InputChoise from "../../partials/InputChoise.tsx";
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation.tsx";
 import PAGES from "../../finals/basic/PAGES.ts";
-import LOCAL_STORAGE_KEY from "../../finals/basic/LOCAL_STORAGE_KEY.ts";
 
 function CheckMinusPage() {
   const { setPage, minus, setMinus } = useContext(AppContext);
-
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY.MINUS, minus || "");
-  }, [minus]);
 
   return (
     <>

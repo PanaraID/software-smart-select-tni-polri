@@ -1,4 +1,4 @@
-import {useContext, useEffect} from "react";
+import { useContext } from "react";
 import AppContext from "../../context/AppContext.tsx";
 
 import MATRA from "../../finals/MATRA.ts";
@@ -7,15 +7,10 @@ import Header from "../../partials/Header.tsx";
 import InputChoice from "../../partials/InputChoise.tsx";
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation.tsx";
 
-import LOCAL_STORAGE_KEY from "../../finals/basic/LOCAL_STORAGE_KEY.ts";
 import PAGES from "../../finals/basic/PAGES.ts";
 
 function CheckMatraPage() {
   const { setPage, matra, setMatra } = useContext(AppContext);
-
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY.MATRA, matra || "");
-  }, [matra]);
 
   return (
     <>
