@@ -6,11 +6,11 @@ type PropsType = {
   page: PAGES;
 };
 
-function ShowResultPage(props: PropsType) {
+function ShowRecommendationPage(props: PropsType) {
   switch (props.page) {
     case PAGES.RECOMMENDATION_1:
       return <Recommendation1 />;
   }
 }
 
-export default ShowResultPage;
+export default ShowRecommendationPage;
