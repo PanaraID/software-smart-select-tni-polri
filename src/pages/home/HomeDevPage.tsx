@@ -30,6 +30,7 @@ function HomeDevPage() {
       <div className="p-2 mt-3 card overflow-auto">
         {/* Check */}
         <h5>Check</h5>
+        <HomeDevButton target={PAGES.CHECK_JURUSAN} text="PILIH JURUSAN KAMU?" />
         <HomeDevButton target={PAGES.CHECK_MATRA} text="PILIH MATRA KAMU?" />
         <HomeDevButton
           target={PAGES.CHECK_BUTA_WARNA}
