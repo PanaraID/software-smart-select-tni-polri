@@ -1,3 +1,6 @@
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
+
 import PAGES from "../../finals/basic/PAGES";
 
 import HomeDevButton from "./partials/HomeDevButton";
@@ -9,6 +12,8 @@ import { ListGroup } from "react-bootstrap";
 // Menampilkan list button untuk mengakses semua halaman.
 // Hanya diperuntukkan untuk tahap pengembangan.
 function HomeDevPage() {
+  const { setPage } = useContext(AppContext);
+
   return (
     <>
       <Header text="Halaman untuk Pengembang" />
@@ -40,7 +45,15 @@ function HomeDevPage() {
         <h5>Rekomendasi</h5>
         <HomeDevButton target={PAGES.RECOMMENDATION_1} text="REKOMENDASI 1" />
       </div>
-      <ButtonNavigation />
+
+      <ButtonNavigation 
+        button1={{
+          text: "Beranda",
+          action: () => {
+            setPage(PAGES.HOME);
+          },
+        }}
+      />
     </>
   );
 }
