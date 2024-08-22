@@ -1,7 +1,8 @@
 function HomeHeader() {
   return (
     <header className="text-center border mb-2">
-      <h1>Rekomendasi Polri TNI</h1>
+      <h1>Software</h1>
+      <h3>Smart Select</h3>
     </header>
   );
 }

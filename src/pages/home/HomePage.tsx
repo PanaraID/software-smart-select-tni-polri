@@ -15,7 +15,7 @@ function HomePage() {
   return (
     <>
       <HomeHeader />
-      <Header text="Aplikasi Pintar TNI Polri" />
+      <Header text="Aplikasi Pintar Pemilihan TNI Polri" />
 
       <div>
         <Button onClick={() => setPage(PAGES.DEV)} variant="info">
