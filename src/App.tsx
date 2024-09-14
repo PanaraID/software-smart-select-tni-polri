@@ -4,47 +4,63 @@ import PAGES from "./finals/basic/PAGES";
 import LOCAL_STORAGE_KEY from "./finals/basic/LOCAL_STORAGE_KEY";
 
 import AppContext from "./context/AppContext";
-import AppContextType from "./context/AppContextType.ts";
+import AppContextType from "./context/AppContextType";
 
 // useState
-import useStatePage from "./hooks/basic/useStatePage.ts";
-import useStateMatra from "./hooks/useStateMatra.ts";
-import useStateButaWarna from "./hooks/useStateButaWarna.ts";
-import useStateMinus from "./hooks/useStateMinus.ts";
+import useStatePage from "./hooks/basic/useStatePage";
+import useStateUmur from "./hooks/useStateUmur";
+import useStateSekolah from "./hooks/useStateSekolah";
+import useStateJurusan from "./hooks/useStateJurusan";
+import useStateButaWarna from "./hooks/useStateButaWarna";
+import useStateMinus from "./hooks/useStateMinus";
 
 // useEffect
-import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage.ts";
-import useEffectSaveCheck from "./hooks/useEffectSaveCheck.ts";
+import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage";
+import useEffectSaveCheck from "./hooks/useEffectSaveCheck";
 
-import ShowBasicPage from "./partials/app/ShowBasicPage.tsx";
-import ShowCheckPage from "./partials/app/ShowCheckPage.tsx";
-import ShowResultPage from "./partials/app/ShowResultPage.tsx";
-import ShowRecommendationPage from "./partials/app/ShowRecommendationPage.tsx";
+import ShowBasicPage from "./partials/app/ShowBasicPage";
+import ShowCheckPage from "./partials/app/ShowCheckPage";
+import ShowResultPage from "./partials/app/ShowResultPage";
+import ShowRecommendationPage from "./partials/app/ShowRecommendationPage";
 
 import Footer from "./partials/Footer";
 function App() {
   const [page, setPage] = useStatePage();
 
   // Check
-  const [matra, setMatra] = useStateMatra();
+  const [umur, setUmur] = useStateUmur();
+  const [sekolah, setSekolah] = useStateSekolah();
+  const [jurusan, setJurusan] = useStateJurusan();
   const [butaWarna, setButaWarna] = useStateButaWarna();
   const [minus, setMinus] = useStateMinus();
 
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
-  useEffectSaveCheck(matra, butaWarna, minus);
+  useEffectSaveCheck(umur, sekolah, jurusan, butaWarna, minus);
 
   function setMyPage(data: PAGES) {
     localStorage.setItem(LOCAL_STORAGE_KEY.BEFORE_PAGE, page);
     setPage(data);
   }
-  
-  const context: AppContextType = {
-    page, setPage: setMyPage,
 
-    matra, setMatra,
-    butaWarna, setButaWarna,
-    minus, setMinus
+  const context: AppContextType = {
+    page,
+    setPage: setMyPage,
+
+    umur,
+    setUmur,
+
+    sekolah,
+    setSekolah,
+
+    jurusan,
+    setJurusan,
+
+    butaWarna,
+    setButaWarna,
+
+    minus,
+    setMinus,
   };
 
   return (

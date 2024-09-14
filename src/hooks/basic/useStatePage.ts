@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import PAGES from "../../finals/basic/PAGES.ts";
+import PAGES from "../../finals/basic/PAGES";
 
-import LOCAL_STORAGE_KEY from "../../finals/basic/LOCAL_STORAGE_KEY.ts";
+import LOCAL_STORAGE_KEY from "../../finals/basic/LOCAL_STORAGE_KEY";
 
 function useStatePage(
   defaultPage: PAGES = PAGES.HOME

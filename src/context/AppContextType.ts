@@ -1,16 +1,25 @@
 import PAGES from "../finals/basic/PAGES";
 
-import MATRA from "../finals/MATRA.ts";
-import BUTA_WARNA from "../finals/BUTA_WARNA.ts";
-import MINUS from "../finals/MINUS.ts";
+import UMUR from "../finals/UMUR";
+import SEKOLAH from "../finals/SEKOLAH";
+import JURUSAN from "../finals/JURUSAN";
+import BUTA_WARNA from "../finals/BUTA_WARNA";
+import MINUS from "../finals/MINUS";
+
 
 type AppContextType = {
   // Basic
   page: PAGES;
   setPage: (page: PAGES) => void;
 
-  matra: MATRA | undefined;
-  setMatra: (matra: MATRA) => void;
+  umur: UMUR | undefined;
+  setUmur: (umur: UMUR) => void;
+
+  sekolah: SEKOLAH | undefined;
+  setSekolah: (sekolah: SEKOLAH) => void;
+
+  jurusan: JURUSAN | undefined;
+  setJurusan: (jurusan: JURUSAN) => void;
 
   butaWarna: BUTA_WARNA | undefined;
   setButaWarna: (butaWarna: BUTA_WARNA) => void;

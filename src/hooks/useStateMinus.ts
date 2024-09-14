@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY.ts";
-import MINUS from "../finals/MINUS.ts";
+import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY";
+import MINUS from "../finals/MINUS";
 
 function useStateMinus(): [
   MINUS | undefined,

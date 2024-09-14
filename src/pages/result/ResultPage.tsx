@@ -7,14 +7,13 @@ import CardUserInput from "./partials/CardUserInput.tsx";
 import CardUserRecommendation from "./partials/CardUserRecommendation.tsx";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
-import PAGES from "../../finals/basic/PAGES.ts";
 
 function ResultPage() {
   const { setPage } = useContext(AppContext);
 
   return (
     <>
-      <Header text="Halaman Result" />
+      <Header text="CEK REKOMENDASI TINGKATAN TNI POLRI" />
 
       {/* Menampilkan inputan user */}
       <CardUserInput />
@@ -24,16 +23,7 @@ function ResultPage() {
       {/* Menampilkan rekomendasi */}
       <CardUserRecommendation />
 
-      <ButtonNavigation
-        button1={{
-          text: "Sebelumnya",
-          action: () => setPage(PAGES.CHECK_MINUS)
-        }}
-        button2={{
-          text: "Beranda",
-          action: () => setPage(PAGES.HOME)
-        }}
-      />
+      <ButtonNavigation />
     </>
   );
 }

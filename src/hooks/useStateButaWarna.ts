@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY.ts";
-import BUTA_WARNA from "../finals/BUTA_WARNA.ts";
+import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY";
+import BUTA_WARNA from "../finals/BUTA_WARNA";
 
 function useStateButaWarna(): [
   BUTA_WARNA | undefined,

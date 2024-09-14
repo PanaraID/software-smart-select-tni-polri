@@ -1,9 +1,7 @@
-import PAGES from "../../finals/basic/PAGES.ts";
+import PAGES from "../../finals/basic/PAGES";
 
-import CheckJurusanPage from "../../pages/check/CheckJurusanPage.tsx";
-import CheckMatra from "../../pages/check/CheckMatraPage.tsx";
-import CheckButaWarnaPage from "../../pages/check/CheckButaWarnaPage.tsx";
-import CheckMinusPage from "../../pages/check/CheckMinusPage.tsx";
+import CheckKesehatanPage from "../../pages/check/CheckKesehatanPage";
+import CheckMataPage from "../../pages/check/CheckMataPage";
 
 type PropsType = {
   page: PAGES;
@@ -11,14 +9,10 @@ type PropsType = {
 
 function ShowCheckPage(props: PropsType) {
   switch (props.page) {
-    case PAGES.CHECK_JURUSAN:
-      return <CheckJurusanPage />;
-    case PAGES.CHECK_MATRA:
-      return <CheckMatra />;
-    case PAGES.CHECK_BUTA_WARNA:
-      return <CheckButaWarnaPage />;
-    case PAGES.CHECK_MINUS:
-      return <CheckMinusPage />;
+    case PAGES.CHECK_KESEHATAN:
+      return <CheckKesehatanPage />;
+    case PAGES.CHECK_MATA:
+        return <CheckMataPage />;
   }
 }
 

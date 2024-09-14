@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import LOCAL_STORAGE_KEY from "../../finals/basic/LOCAL_STORAGE_KEY.ts";
+import LOCAL_STORAGE_KEY from "../../finals/basic/LOCAL_STORAGE_KEY";
 
 function useEffectSaveActivePage(page: string) {
   useEffect(() => {

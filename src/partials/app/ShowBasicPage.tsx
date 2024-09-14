@@ -1,7 +1,6 @@
-import PAGES from "../../finals/basic/PAGES.ts";
+import PAGES from "../../finals/basic/PAGES";
 
-import HomePage from "../../pages/home/HomePage.tsx";
-import HomeDevPage from "../../pages/home/HomeDevPage.tsx";
+import HomePage from "../../pages/home/HomePage";
 
 type PropsType = {
   page: PAGES;
@@ -11,8 +10,6 @@ function ShowBasicPage(props: PropsType) {
   switch (props.page) {
     case PAGES.HOME:
       return <HomePage />;
-    case PAGES.DEV:
-      return <HomeDevPage />;
   }
 }
 
