@@ -1,10 +1,11 @@
 import {useContext} from "react";
-import AppContext from "../../context/AppContext.tsx";
+import AppContext from "../../context/AppContext";
 
-import Header from "../../partials/Header.tsx";
+import Header from "../../partials/Header";
 
-import CardUserInput from "./partials/CardUserInput.tsx";
-import CardUserRecommendation from "./partials/CardUserRecommendation.tsx";
+import CardDataGeneral from "./partials/CardDataGeneral";
+import CardCheckKesehatan from "./partials/CardCheckKesehatan";
+import CardUserRecommendation from "./partials/CardUserRecommendation";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 
@@ -15,10 +16,13 @@ function ResultPage() {
     <>
       <Header text="CEK REKOMENDASI TINGKATAN TNI POLRI" />
 
-      {/* Menampilkan inputan user */}
-      <CardUserInput />
+      {/* Menampilkan data umum */}
+      <CardDataGeneral />
 
       <div className="my-2" />
+
+      {/* Menampilkan cek kesehatan */}
+      <CardCheckKesehatan />
 
       {/* Menampilkan rekomendasi */}
       <CardUserRecommendation />

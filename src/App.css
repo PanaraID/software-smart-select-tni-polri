@@ -3,3 +3,11 @@
   margin-top: 2%;
   margin-bottom: 100px;
 }
+
+.badge-hover {
+  cursor: pointer;
+}
+
+.hover-scale-0-99:hover {
+  transform: scale(.99);
+}

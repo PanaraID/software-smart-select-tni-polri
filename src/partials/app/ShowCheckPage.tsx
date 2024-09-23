@@ -2,6 +2,7 @@ import PAGES from "../../finals/basic/PAGES";
 
 import CheckKesehatanPage from "../../pages/check/CheckKesehatanPage";
 import CheckMataPage from "../../pages/check/CheckMataPage";
+import CheckGigiPage from "../../pages/check/CheckGigiPage";
 
 type PropsType = {
   page: PAGES;
@@ -13,6 +14,8 @@ function ShowCheckPage(props: PropsType) {
       return <CheckKesehatanPage />;
     case PAGES.CHECK_MATA:
         return <CheckMataPage />;
+    case PAGES.CHECK_GIGI:
+      return <CheckGigiPage />;
   }
 }
 

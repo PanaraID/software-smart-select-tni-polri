@@ -9,13 +9,13 @@ import Header from "../../partials/Header";
 import UMUR from "../../finals/UMUR";
 import SEKOLAH from "../../finals/SEKOLAH";
 import JURUSAN from "../../finals/JURUSAN";
+import TINGGI_BADAN from "../../finals/TINGGI_BADAN";
 import BUTA_WARNA from "../../finals/BUTA_WARNA";
 import MINUS from "../../finals/MINUS";
 
 import InputChoice from "../../partials/InputChoise";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
-// import { Button } from "react-bootstrap";
 
 function HomePage() {
   const {
@@ -29,6 +29,9 @@ function HomePage() {
 
     jurusan,
     setJurusan,
+
+    tinggiBadan,
+    setTinggiBadan,
 
     butaWarna,
     setButaWarna,
@@ -59,6 +62,12 @@ function HomePage() {
         enumType={JURUSAN}
         selected={jurusan}
         setSelected={setJurusan}
+      />
+      <InputChoice
+        title="Tinggi Badan"
+        enumType={TINGGI_BADAN}
+        selected={tinggiBadan}
+        setSelected={setTinggiBadan}
       />
       <InputChoice
         title="Buta Warna"

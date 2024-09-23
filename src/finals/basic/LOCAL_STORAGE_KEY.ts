@@ -5,8 +5,12 @@ enum LOCAL_STORAGE_KEY {
   UMUR = "tni-polri-umur",
   SEKOLAH = "tni-polri-sekolah",
   JURUSAN = "tni-polri-jurusan",
+  TINGGI_BADAN = "tni-polri-tinggi-badan",
   BUTA_WARNA = "tni-polri-buta-warna",
   MINUS = "tni-polri-buta-minus",
+
+  // Kesehatan
+  GIGI_OMPONG = "tni-polri-buta-kesehatan-gigi-ompong",
 }
 
 export default LOCAL_STORAGE_KEY;

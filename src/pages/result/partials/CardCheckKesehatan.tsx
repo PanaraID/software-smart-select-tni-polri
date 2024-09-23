@@ -1,4 +1,4 @@
-import { useContext } from "react";
+  import { useContext } from "react";
 import AppContext from "../../../context/AppContext";
 
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
@@ -11,7 +11,7 @@ import MINUS from "../../../finals/MINUS";
 
 import NotFilled from "./NotFilled";
 
-function CardUserInput() {
+function CardCheckKesehatan() {
   const { umur, sekolah, jurusan, butaWarna, minus } = useContext(AppContext);
 
   const theUmur = UMUR[umur as unknown as keyof typeof UMUR];
@@ -22,23 +22,23 @@ function CardUserInput() {
 
   return (
     <Card>
-      <Card.Header>Berikut adalah daftar data yang anda masukkan:</Card.Header>
+      <Card.Header>Cek Kesehatan</Card.Header>
       <Card.Body>
         <ListGroup>
           <ListGroupItem>
-            Umur: {theUmur ?? <NotFilled />}
+            Mata: {theUmur ?? <NotFilled />}
           </ListGroupItem>
           <ListGroupItem>
-            Asal Sekolah: {theSekolah ?? <NotFilled />}
+            Bagian Kepala: {theSekolah ?? <NotFilled />}
           </ListGroupItem>
           <ListGroupItem>
-            Asal Jurusan: {theJurusan ?? <NotFilled />}
+            Telinga: {theJurusan ?? <NotFilled />}
           </ListGroupItem>
           <ListGroupItem>
-            Buta Warna: {theButaWarna ?? <NotFilled />}
+            Bagian Hidung: {theButaWarna ?? <NotFilled />}
           </ListGroupItem>
           <ListGroupItem>
-            Mata minus: {theMinus ?? <NotFilled />}
+            Wajah: {theMinus ?? <NotFilled />}
           </ListGroupItem>
         </ListGroup>
       </Card.Body>
@@ -46,4 +46,4 @@ function CardUserInput() {
   );
 }
 
-export default CardUserInput;
+export default CardCheckKesehatan;

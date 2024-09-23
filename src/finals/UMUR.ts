@@ -1,6 +1,19 @@
 enum UMUR {
-  satu = "1",
-  dua = "2"
+  ENAM_BELAS = "16",
+  TUJUH_BELAS = "17",
+  DELAPAN_BELAS = "18",
+  SEBELAS_BELAS = "19",
+  DUA_PULUH = "20",
+  DUA_PULUH_SATU = "21",
+  DUA_PULUH_DUA = "22",
+  DUA_PULUH_TIGA = "23",
+  DUA_PULUH_EMPAT = "24",
+  DUA_PULUH_LIMA = "25",
+  DUA_PULUH_ENAM = "26",
+  DUA_PULUH_TUJUH = "27",
+  DUA_PULUH_DELAPAN = "28",
+  DUA_PULUH_SEMBILAN = "29",
+  TIGA_PULUH = "30"
 }
 
 export default UMUR;

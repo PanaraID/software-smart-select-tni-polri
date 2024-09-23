@@ -11,8 +11,12 @@ import useStatePage from "./hooks/basic/useStatePage";
 import useStateUmur from "./hooks/useStateUmur";
 import useStateSekolah from "./hooks/useStateSekolah";
 import useStateJurusan from "./hooks/useStateJurusan";
+import useStateTinggiBadan from "./hooks/useStateTinggiBadan";
 import useStateButaWarna from "./hooks/useStateButaWarna";
 import useStateMinus from "./hooks/useStateMinus";
+
+// useState Kesehatan
+import useStateGigiOmpong from "./hooks/kesehatan/gigi/useStateGigiOmpong";
 
 // useEffect
 import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage";
@@ -24,6 +28,7 @@ import ShowResultPage from "./partials/app/ShowResultPage";
 import ShowRecommendationPage from "./partials/app/ShowRecommendationPage";
 
 import Footer from "./partials/Footer";
+
 function App() {
   const [page, setPage] = useStatePage();
 
@@ -31,12 +36,21 @@ function App() {
   const [umur, setUmur] = useStateUmur();
   const [sekolah, setSekolah] = useStateSekolah();
   const [jurusan, setJurusan] = useStateJurusan();
+  const [tinggiBadan, setTinggiBadan] = useStateTinggiBadan();
   const [butaWarna, setButaWarna] = useStateButaWarna();
   const [minus, setMinus] = useStateMinus();
 
+  // Kesehatan
+  const [gigiOmpong, setGigiOmpong] = useStateGigiOmpong();
+
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
-  useEffectSaveCheck(umur, sekolah, jurusan, butaWarna, minus);
+  useEffectSaveCheck(
+    umur, sekolah, jurusan, tinggiBadan, butaWarna, minus,
+
+    // Kesehatan
+    gigiOmpong
+  );
 
   function setMyPage(data: PAGES) {
     localStorage.setItem(LOCAL_STORAGE_KEY.BEFORE_PAGE, page);
@@ -56,11 +70,18 @@ function App() {
     jurusan,
     setJurusan,
 
+    tinggiBadan,
+    setTinggiBadan,
+
     butaWarna,
     setButaWarna,
 
     minus,
     setMinus,
+
+    // Kesehatan
+    gigiOmpong,
+    setGigiOmpong
   };
 
   return (

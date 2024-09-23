@@ -14,7 +14,16 @@ function CheckKesehatanPage() {
   const { setPage } = useContext(AppContext);
 
   const list: [PAGES, string][] = [
-    [PAGES.CHECK_MATA, "Mata"]
+    [PAGES.CHECK_MATA, "Mata"],
+    // [PAGES.CHECK_MATA, "Bagian Kepala"],
+    // [PAGES.CHECK_MATA, "Telinga"],
+    // [PAGES.CHECK_MATA, "Bagian Hidung"],
+    // [PAGES.CHECK_MATA, "Wajah"],
+    // [PAGES.CHECK_MATA, "Bagian Tangan"],
+    // [PAGES.CHECK_MATA, "Tulang Punggung"],
+    // [PAGES.CHECK_MATA, "Bagian Kaki"],
+    // [PAGES.CHECK_MATA, "Tes Bedah"],
+    [PAGES.CHECK_GIGI, "Gigi"],
   ];
 
   return (
@@ -24,13 +33,19 @@ function CheckKesehatanPage() {
       <ListGroup>
         {list.map((value, index) => {
           return (
-            <ListGroup.Item action key={index}>
-              <div className="d-flex justify-content-between">
-                <span>{value[1]}</span>
-                <Badge pill bg="info" onClick={() => setPage(value[0])}>
-                  Klik Disini
-                </Badge>
-              </div>
+            <ListGroup.Item
+              key={index}
+              className="hover-scale-0-99 d-flex justify-content-between"
+            >
+              <span>{value[1]}</span>
+              <Badge
+                className="badge-hover"
+                pill
+                bg="info"
+                onClick={() => setPage(value[0])}
+              >
+                Klik Disini
+              </Badge>
             </ListGroup.Item>
           );
         })}
