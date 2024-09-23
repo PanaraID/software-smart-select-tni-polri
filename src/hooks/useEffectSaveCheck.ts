@@ -9,6 +9,8 @@ import MINUS from "../finals/MINUS";
 
 // Kesehatan
 import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
+import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
+import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 
 import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY";
 
@@ -21,7 +23,9 @@ function useEffectSaveCheck(
   minus: MINUS | undefined,
 
   // Kesehatan
-  gigiOmpong: GIGI_OMPONG | undefined
+  gigiOmpong: GIGI_OMPONG | undefined,
+  gigiJumlah: GIGI_JUMLAH | undefined,
+  gigiRapih: GIGI_RAPIH | undefined,
 ) {
   return useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY.UMUR, umur || "");
@@ -30,8 +34,12 @@ function useEffectSaveCheck(
     localStorage.setItem(LOCAL_STORAGE_KEY.TINGGI_BADAN, tinggiBadan || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.BUTA_WARNA, butaWarna || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.MINUS, minus || "");
+
+    // Kesehatan
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_OMPONG, gigiOmpong || "");
-  }, [umur, sekolah, jurusan, tinggiBadan, butaWarna, minus, gigiOmpong]);
+    localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_JUMLAH, gigiJumlah || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_RAPIH, gigiRapih || "");
+  }, [umur, sekolah, jurusan, tinggiBadan, butaWarna, minus, gigiOmpong, gigiJumlah, gigiRapih]);
 }
 
 export default useEffectSaveCheck;

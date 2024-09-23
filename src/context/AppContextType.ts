@@ -8,7 +8,8 @@ import BUTA_WARNA from "../finals/BUTA_WARNA";
 import MINUS from "../finals/MINUS";
 
 import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
-
+import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
+import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 
 type AppContextType = {
   // Basic
@@ -36,6 +37,12 @@ type AppContextType = {
   // Kesehatan
   gigiOmpong: GIGI_OMPONG | undefined;
   setGigiOmpong: (gigiOmpong: GIGI_OMPONG) => void;
+
+  gigiJumlah: GIGI_JUMLAH | undefined;
+  setGigiJumlah: (gigiJumlah: GIGI_OMPONG) => void;
+
+  gigiRapih: GIGI_RAPIH | undefined;
+  setGigiRapih: (gigiRapih: GIGI_RAPIH) => void;
 };
 
 export default AppContextType;
