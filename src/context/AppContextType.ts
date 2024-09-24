@@ -39,7 +39,7 @@ type AppContextType = {
   setGigiOmpong: (gigiOmpong: GIGI_OMPONG) => void;
 
   gigiJumlah: GIGI_JUMLAH | undefined;
-  setGigiJumlah: (gigiJumlah: GIGI_OMPONG) => void;
+  setGigiJumlah: (gigiJumlah: GIGI_JUMLAH) => void;
 
   gigiRapih: GIGI_RAPIH | undefined;
   setGigiRapih: (gigiRapih: GIGI_RAPIH) => void;
