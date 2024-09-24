@@ -19,6 +19,7 @@ import useStateMinus from "./hooks/useStateMinus";
 import useStateGigiOmpong from "./hooks/kesehatan/gigi/useStateGigiOmpong";
 import useStateGigiJumlah from "./hooks/kesehatan/gigi/useStateGigiJumlah";
 import useStateGigiRapih from "./hooks/kesehatan/gigi/useStateGigiRapih";
+import useStateGigiFraktur from "./hooks/kesehatan/gigi/useStateGigiFraktur";
 
 // useEffect
 import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage";
@@ -46,6 +47,7 @@ function App() {
   const [gigiOmpong, setGigiOmpong] = useStateGigiOmpong();
   const [gigiJumlah, setGigiJumlah] = useStateGigiJumlah();
   const [gigiRapih, setGigiRapih] = useStateGigiRapih();
+  const [gigiFraktur, setGigiFraktur] = useStateGigiFraktur();
 
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
@@ -53,7 +55,7 @@ function App() {
     umur, sekolah, jurusan, tinggiBadan, butaWarna, minus,
 
     // Kesehatan
-    gigiOmpong, gigiJumlah, gigiRapih
+    gigiOmpong, gigiJumlah, gigiRapih, gigiFraktur
   );
 
   function setMyPage(data: PAGES) {
@@ -91,7 +93,10 @@ function App() {
     setGigiJumlah,
 
     gigiRapih,
-    setGigiRapih
+    setGigiRapih,
+
+    gigiFraktur,
+    setGigiFraktur
   };
 
   return (

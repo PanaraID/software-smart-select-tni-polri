@@ -6,8 +6,9 @@ import Header from "../../partials/Header";
 import GIGI_OMPONG from "../../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../../finals/kesehatan/gigi/GIGI_RAPIH";
+import GIGI_FRAKTUR from "../../finals/kesehatan/gigi/GIGI_FRAKTUR";
 
-import InputChoice from "../../partials/InputChoise";
+import InputChoice from "../../partials/InputChoice";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 
@@ -20,7 +21,10 @@ function CheckGigiPage() {
     setGigiJumlah,
 
     gigiRapih,
-    setGigiRapih
+    setGigiRapih,
+
+    gigiFraktur,
+    setGigiFraktur
   } = useContext(AppContext);
 
   return (
@@ -48,6 +52,14 @@ function CheckGigiPage() {
         selected={gigiRapih}
         setSelected={setGigiRapih}
       />
+      <InputChoice
+        title="Fraktur Gigi"
+        enumType={GIGI_FRAKTUR}
+        selected={gigiFraktur}
+        setSelected={setGigiFraktur}
+      />
+
+      <hr />
       
       <ButtonNavigation />
     </>

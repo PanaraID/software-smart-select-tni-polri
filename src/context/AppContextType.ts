@@ -10,6 +10,7 @@ import MINUS from "../finals/MINUS";
 import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
+import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
 
 type AppContextType = {
   // Basic
@@ -43,6 +44,9 @@ type AppContextType = {
 
   gigiRapih: GIGI_RAPIH | undefined;
   setGigiRapih: (gigiRapih: GIGI_RAPIH) => void;
+
+  gigiFraktur: GIGI_FRAKTUR | undefined;
+  setGigiFraktur: (gigiFraktur: GIGI_FRAKTUR) => void;
 };
 
 export default AppContextType;

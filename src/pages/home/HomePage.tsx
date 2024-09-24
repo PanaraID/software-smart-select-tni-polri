@@ -13,7 +13,7 @@ import TINGGI_BADAN from "../../finals/TINGGI_BADAN";
 import BUTA_WARNA from "../../finals/BUTA_WARNA";
 import MINUS from "../../finals/MINUS";
 
-import InputChoice from "../../partials/InputChoise";
+import InputChoice from "../../partials/InputChoice";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 

@@ -13,6 +13,7 @@ enum LOCAL_STORAGE_KEY {
   GIGI_OMPONG = "tni-polri-buta-kesehatan-gigi-ompong",
   GIGI_JUMLAH = "tni-polri-buta-kesehatan-gigi-jumlah",
   GIGI_RAPIH = "tni-polri-buta-kesehatan-gigi-rapih",
+  GIGI_FRAKTUR = "tni-polri-buta-kesehatan-gigi-fraktur"
 }
 
 export default LOCAL_STORAGE_KEY;
