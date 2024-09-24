@@ -12,6 +12,8 @@ import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
 
+import WAJAH_BERCAK_HITAM from "../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
+
 type AppContextType = {
   // Basic
   page: PAGES;
@@ -47,6 +49,9 @@ type AppContextType = {
 
   gigiFraktur: GIGI_FRAKTUR | undefined;
   setGigiFraktur: (gigiFraktur: GIGI_FRAKTUR) => void;
+
+  wajahBercakHitam: WAJAH_BERCAK_HITAM | undefined;
+  setWajahBercakHitam: (wajahBercakHitam: WAJAH_BERCAK_HITAM) => void;
 };
 
 export default AppContextType;

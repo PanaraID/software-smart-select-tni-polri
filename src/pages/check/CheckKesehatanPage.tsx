@@ -18,7 +18,7 @@ function CheckKesehatanPage() {
     // [PAGES.CHECK_MATA, "Bagian Kepala"],
     // [PAGES.CHECK_MATA, "Telinga"],
     // [PAGES.CHECK_MATA, "Bagian Hidung"],
-    // [PAGES.CHECK_MATA, "Wajah"],
+    [PAGES.CHECK_WAJAH, "Wajah"],
     // [PAGES.CHECK_MATA, "Bagian Tangan"],
     // [PAGES.CHECK_MATA, "Tulang Punggung"],
     // [PAGES.CHECK_MATA, "Bagian Kaki"],
