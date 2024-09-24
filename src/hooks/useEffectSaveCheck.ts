@@ -35,7 +35,7 @@ function useEffectSaveCheck(
 
   wajahBercakHitam: WAJAH_BERCAK_HITAM | undefined
 ) {
-  return useEffect(() => {
+  useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY.UMUR, umur || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.SEKOLAH, sekolah || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.JURUSAN, jurusan || "");

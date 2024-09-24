@@ -39,7 +39,7 @@ function CardDataGeneral() {
             Buta Warna: {theButaWarna ? <Filled text={theButaWarna} /> : <NotFilled />}
           </ListGroupItem>
           <ListGroupItem>
-            Mata minus: {theMinus ? <Filled text={theMinus} /> : <NotFilled />}
+            Mata Minus: {theMinus ? <Filled text={theMinus} /> : <NotFilled />}
           </ListGroupItem>
         </ListGroup>
       </Card.Body>
