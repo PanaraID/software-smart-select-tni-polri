@@ -21,6 +21,7 @@ import useStateGigiJumlah from "./hooks/kesehatan/gigi/useStateGigiJumlah";
 import useStateGigiRapih from "./hooks/kesehatan/gigi/useStateGigiRapih";
 import useStateGigiFraktur from "./hooks/kesehatan/gigi/useStateGigiFraktur";
 import useStateGigiBerjejal from "./hooks/kesehatan/gigi/useStateGigiBerjejal";
+import useStateGigiOpenBite from "./hooks/kesehatan/gigi/useStateGigiOpenBite";
 
 import useStateWajahBercakHitam from "./hooks/kesehatan/wajah/useStateWajahBercakHitam";
 
@@ -52,6 +53,7 @@ function App() {
   const [gigiRapih, setGigiRapih] = useStateGigiRapih();
   const [gigiFraktur, setGigiFraktur] = useStateGigiFraktur();
   const [gigiBerjejal, setGigiBerjejal] = useStateGigiBerjejal();
+  const [gigiOpenBite, setGigiOpenBite] = useStateGigiOpenBite();
 
   const [wajahBercakHitam, setWajahBercakHitam] = useStateWajahBercakHitam();
 
@@ -61,7 +63,7 @@ function App() {
     umur, sekolah, jurusan, tinggiBadan, butaWarna, minus,
 
     // Kesehatan
-    gigiOmpong, gigiJumlah, gigiRapih, gigiFraktur, gigiBerjejal,
+    gigiOmpong, gigiJumlah, gigiRapih, gigiFraktur, gigiBerjejal, gigiOpenBite,
     wajahBercakHitam
   );
 
@@ -107,6 +109,9 @@ function App() {
 
     gigiBerjejal,
     setGigiBerjejal,
+
+    gigiOpenBite,
+    setGigiOpenBite,
 
     wajahBercakHitam,
     setWajahBercakHitam

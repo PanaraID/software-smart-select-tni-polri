@@ -13,6 +13,7 @@ import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
 import GIGI_BERJEJAL from "../finals/kesehatan/gigi/GIGI_BERJEJAL";
+import GIGI_OPEN_BITE from "../finals/kesehatan/gigi/GIGI_OPEN_BITE";
 
 import WAJAH_BERCAK_HITAM from "../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
 
@@ -32,6 +33,7 @@ function useEffectSaveCheck(
   gigiRapih: GIGI_RAPIH | undefined,
   gigiFraktur: GIGI_FRAKTUR | undefined,
   gigiBerjejal: GIGI_BERJEJAL | undefined,
+  gigiOpenBite: GIGI_OPEN_BITE | undefined,
 
   wajahBercakHitam: WAJAH_BERCAK_HITAM | undefined
 ) {
@@ -49,6 +51,7 @@ function useEffectSaveCheck(
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_RAPIH, gigiRapih || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_FRAKTUR, gigiFraktur || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_BERJEJAL, gigiBerjejal || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_OPEN_BITE, gigiOpenBite || "");
 
     localStorage.setItem(LOCAL_STORAGE_KEY.WAJAH_BERCAK_HITAM, wajahBercakHitam || "");
   }, [
@@ -56,7 +59,7 @@ function useEffectSaveCheck(
     umur, sekolah, jurusan, tinggiBadan, butaWarna, minus, 
     
     // Kesehatan
-    gigiOmpong, gigiJumlah, gigiRapih, gigiFraktur, gigiBerjejal,
+    gigiOmpong, gigiJumlah, gigiRapih, gigiFraktur, gigiBerjejal, gigiOpenBite,
     wajahBercakHitam
   ]);
 }
