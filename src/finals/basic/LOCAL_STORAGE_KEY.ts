@@ -14,6 +14,7 @@ enum LOCAL_STORAGE_KEY {
   GIGI_JUMLAH = "tni-polri-buta-kesehatan-gigi-jumlah",
   GIGI_RAPIH = "tni-polri-buta-kesehatan-gigi-rapih",
   GIGI_FRAKTUR = "tni-polri-buta-kesehatan-gigi-fraktur",
+  GIGI_BERJEJAL = "tni-polri-buta-kesehatan-gigi-berjejal",
 
   WAJAH_BERCAK_HITAM = "tni-polri-buta-kesehatan-wajah-bercak-hitam"
 }

@@ -39,6 +39,7 @@ function CheckKesehatanPage() {
             >
               <span>{value[1]}</span>
               <Badge
+                tabIndex={index + 1}
                 className="badge-hover"
                 pill
                 bg="info"

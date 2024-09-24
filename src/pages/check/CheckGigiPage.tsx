@@ -7,6 +7,7 @@ import GIGI_OMPONG from "../../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../../finals/kesehatan/gigi/GIGI_FRAKTUR";
+import GIGI_BERJEJAL from "../../finals/kesehatan/gigi/GIGI_BERJEJAL";
 
 import InputChoice from "../../partials/InputChoice";
 
@@ -24,7 +25,10 @@ function CheckGigiPage() {
     setGigiRapih,
 
     gigiFraktur,
-    setGigiFraktur
+    setGigiFraktur,
+
+    gigiBerjejal,
+    setGigiBerjejal
   } = useContext(AppContext);
 
   return (
@@ -60,6 +64,31 @@ function CheckGigiPage() {
       />
 
       <hr />
+      {/* TODO */}
+      <InputChoice
+        title="Gigi Crowding/Berjejal"
+        enumType={GIGI_BERJEJAL}
+        selected={gigiBerjejal}
+        setSelected={setGigiBerjejal}
+      />
+      {/* <InputChoice
+        title="Gigi OpenBite"
+        enumType={GIGI_FRAKTUR}
+        selected={gigiFraktur}
+        setSelected={setGigiFraktur}
+      />
+      <InputChoice
+        title="Gigi OverBite"
+        enumType={GIGI_FRAKTUR}
+        selected={gigiFraktur}
+        setSelected={setGigiFraktur}
+      />
+      <InputChoice
+        title="Gigi CrossBite"
+        enumType={GIGI_FRAKTUR}
+        selected={gigiFraktur}
+        setSelected={setGigiFraktur}
+      /> */}
       
       <ButtonNavigation />
     </>
