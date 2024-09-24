@@ -1,6 +1,6 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 
-import AppContext from "../../context/AppContext";
+// import AppContext from "../../context/AppContext";
 import Header from "../../partials/Header.tsx";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";

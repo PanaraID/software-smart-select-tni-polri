@@ -1,5 +1,7 @@
+import { Badge } from "react-bootstrap";
+
 function NotFilled() {
-  return <span className="p-1 bg-warning rounded">Tidak Diisi</span>;
+  return <Badge bg="warning" text="dark">Tidak Diisi</Badge>;
 }
 
 export default NotFilled;

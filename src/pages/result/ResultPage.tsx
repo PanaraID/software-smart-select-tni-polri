@@ -1,16 +1,16 @@
-import {useContext} from "react";
-import AppContext from "../../context/AppContext";
+// import {useContext} from "react";
+// import AppContext from "../../context/AppContext";
 
 import Header from "../../partials/Header";
 
 import CardDataGeneral from "./partials/CardDataGeneral";
 import CardCheckKesehatan from "./partials/CardCheckKesehatan";
-import CardUserRecommendation from "./partials/CardUserRecommendation";
+// import CardUserRecommendation from "./partials/CardUserRecommendation";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 
 function ResultPage() {
-  const { setPage } = useContext(AppContext);
+  // const { setPage } = useContext(AppContext);
 
   return (
     <>
@@ -25,7 +25,7 @@ function ResultPage() {
       <CardCheckKesehatan />
 
       {/* Menampilkan rekomendasi */}
-      <CardUserRecommendation />
+      {/* <CardUserRecommendation /> */}
 
       <ButtonNavigation />
     </>

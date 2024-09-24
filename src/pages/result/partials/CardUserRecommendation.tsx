@@ -1,17 +1,16 @@
-import {useContext} from "react";
-import AppContext from "../../../context/AppContext.tsx";
+import { useContext } from "react";
+import AppContext from "../../../context/AppContext";
 
-import MATRA from "../../../finals/MATRA.ts";
-import BUTA_WARNA from "../../../finals/BUTA_WARNA.ts";
-import MINUS from "../../../finals/MINUS.ts";
+import BUTA_WARNA from "../../../finals/BUTA_WARNA";
+import MINUS from "../../../finals/MINUS";
 
 import {Button, Card, ListGroup, ListGroupItem} from "react-bootstrap";
-import AllDataNotFilled from "./AllDataNotFilled.tsx";
-import PAGES from "../../../finals/basic/PAGES.ts";
+import AllDataNotFilled from "./AllDataNotFilled";
+import PAGES from "../../../finals/basic/PAGES";
 
-function isFilledAll(matra: MATRA | undefined, butaWarna: BUTA_WARNA | undefined, minus: MINUS | undefined): boolean {
+function isFilledAll(butaWarna: BUTA_WARNA | undefined, minus: MINUS | undefined): boolean {
   // Memastikan semua data diisi
-  return matra !== undefined && butaWarna !== undefined && minus !== undefined;
+  return butaWarna !== undefined && minus !== undefined;
 }
 
 function getRecommendations(): [string, PAGES][] {
@@ -21,9 +20,9 @@ function getRecommendations(): [string, PAGES][] {
 }
 
 function CardUserRecommendation() {
-  const {setPage, matra, butaWarna, minus} = useContext(AppContext);
+  const {setPage, butaWarna, minus} = useContext(AppContext);
 
-  const isFilled = isFilledAll(matra, butaWarna, minus);
+  const isFilled = isFilledAll(butaWarna, minus);
   const recommendations = getRecommendations();
 
   return (
