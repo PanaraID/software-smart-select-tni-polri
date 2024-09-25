@@ -22,6 +22,8 @@ import useStateGigiRapih from "./hooks/kesehatan/gigi/useStateGigiRapih";
 import useStateGigiFraktur from "./hooks/kesehatan/gigi/useStateGigiFraktur";
 import useStateGigiBerjejal from "./hooks/kesehatan/gigi/useStateGigiBerjejal";
 import useStateGigiOpenBite from "./hooks/kesehatan/gigi/useStateGigiOpenBite";
+import useStateGigiOverBite from "./hooks/kesehatan/gigi/useStateGigiOverBite";
+import useStateGigiCrossBite from "./hooks/kesehatan/gigi/useStateGigiCrossBite";
 
 import useStateWajahBercakHitam from "./hooks/kesehatan/wajah/useStateWajahBercakHitam";
 
@@ -54,16 +56,31 @@ function App() {
   const [gigiFraktur, setGigiFraktur] = useStateGigiFraktur();
   const [gigiBerjejal, setGigiBerjejal] = useStateGigiBerjejal();
   const [gigiOpenBite, setGigiOpenBite] = useStateGigiOpenBite();
+  const [gigiOverBite, setGigiOverBite] = useStateGigiOverBite();
+  const [gigiCrossBite, setGigiCrossBite] = useStateGigiCrossBite();
 
   const [wajahBercakHitam, setWajahBercakHitam] = useStateWajahBercakHitam();
 
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
   useEffectSaveCheck(
-    umur, sekolah, jurusan, tinggiBadan, butaWarna, minus,
+    umur,
+    sekolah,
+    jurusan,
+    tinggiBadan,
+    butaWarna,
+    minus,
 
     // Kesehatan
-    gigiOmpong, gigiJumlah, gigiRapih, gigiFraktur, gigiBerjejal, gigiOpenBite,
+    gigiOmpong,
+    gigiJumlah,
+    gigiRapih,
+    gigiFraktur,
+    gigiBerjejal,
+    gigiOpenBite,
+    gigiOverBite,
+    gigiCrossBite,
+
     wajahBercakHitam
   );
 
@@ -113,8 +130,14 @@ function App() {
     gigiOpenBite,
     setGigiOpenBite,
 
+    gigiOverBite,
+    setGigiOverBite,
+
+    gigiCrossBite,
+    setGigiCrossBite,
+
     wajahBercakHitam,
-    setWajahBercakHitam
+    setWajahBercakHitam,
   };
 
   return (

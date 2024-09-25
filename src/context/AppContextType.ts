@@ -13,6 +13,7 @@ import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
 import GIGI_BERJEJAL from "../finals/kesehatan/gigi/GIGI_BERJEJAL";
 import GIGI_OPEN_BITE from "../finals/kesehatan/gigi/GIGI_OPEN_BITE";
+import GIGI_CROSS_BITE from "../finals/kesehatan/gigi/GIGI_CROSS_BITE";
 
 import WAJAH_BERCAK_HITAM from "../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
 
@@ -56,7 +57,13 @@ type AppContextType = {
   setGigiBerjejal: (gigiBerjejal: GIGI_BERJEJAL) => void;
 
   gigiOpenBite: GIGI_OPEN_BITE | undefined;
-  setGigiOpenBite: (gigiBerjejal: GIGI_OPEN_BITE) => void;
+  setGigiOpenBite: (gigiOpenBite: GIGI_OPEN_BITE) => void;
+
+  gigiOverBite: GIGI_OPEN_BITE | undefined;
+  setGigiOverBite: (gigiOverBite: GIGI_OPEN_BITE) => void;
+
+  gigiCrossBite: GIGI_CROSS_BITE | undefined;
+  setGigiCrossBite: (gigiCrossBite: GIGI_CROSS_BITE) => void;
 
   wajahBercakHitam: WAJAH_BERCAK_HITAM | undefined;
   setWajahBercakHitam: (wajahBercakHitam: WAJAH_BERCAK_HITAM) => void;

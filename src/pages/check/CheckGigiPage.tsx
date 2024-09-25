@@ -9,6 +9,18 @@ import GIGI_RAPIH from "../../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../../finals/kesehatan/gigi/GIGI_FRAKTUR";
 import GIGI_BERJEJAL from "../../finals/kesehatan/gigi/GIGI_BERJEJAL";
 import GIGI_OPEN_BITE from "../../finals/kesehatan/gigi/GIGI_OPEN_BITE";
+import GIGI_OVER_BITE from "../../finals/kesehatan/gigi/GIGI_OVER_BITE";
+import GIGI_CROSS_BITE from "../../finals/kesehatan/gigi/GIGI_CROSS_BITE";
+import GIGI_IMPAKSI from "../../finals/kesehatan/gigi/GIGI_IMPAKSI";
+import GIGI_RUSAK_BERLUBANG from "../../finals/kesehatan/gigi/GIGI_RUSAK_BERLUBANG";
+import GIGI_BERJAMUR from "../../finals/kesehatan/gigi/GIGI_BERJAMUR";
+import GIGI_BERJAMUR_KUNING from "../../finals/kesehatan/gigi/GIGI_BERJAMUR_KUNING";
+import GIGI_ABRASI from "../../finals/kesehatan/gigi/GIGI_ABRASI";
+import GIGI_PALSU_LEPAS_PASANG from "../../finals/kesehatan/gigi/GIGI_PALSU_LEPAS_PASANG";
+import GIGI_BEHEL from "../../finals/kesehatan/gigi/GIGI_BEHEL";
+import GIGI_KELAINAN_SENDI from "../../finals/kesehatan/gigi/GIGI_KELAINAN_SENDI";
+import GIGI_TONGGOS from "../../finals/kesehatan/gigi/GIGI_TONGGOS";
+import GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH from "../../finals/kesehatan/gigi/GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH";
 
 import InputChoice from "../../partials/InputChoice";
 
@@ -32,7 +44,13 @@ function CheckGigiPage() {
     setGigiBerjejal,
 
     gigiOpenBite,
-    setGigiOpenBite
+    setGigiOpenBite,
+
+    gigiOverBite,
+    setGigiOverBite,
+
+    gigiCrossBite,
+    setGigiCrossBite
   } = useContext(AppContext);
 
   return (
@@ -68,7 +86,7 @@ function CheckGigiPage() {
       />
 
       <hr />
-      {/* TODO */}
+      
       <InputChoice
         title="Gigi Crowding/Berjejal"
         enumType={GIGI_BERJEJAL}
@@ -81,18 +99,18 @@ function CheckGigiPage() {
         selected={gigiOpenBite}
         setSelected={setGigiOpenBite}
       />
-      {/* <InputChoice
-        title="Gigi OverBite"
-        enumType={GIGI_FRAKTUR}
-        selected={gigiFraktur}
-        setSelected={setGigiFraktur}
+      <InputChoice
+        title="Gigi Over Bite"
+        enumType={GIGI_OVER_BITE}
+        selected={gigiOverBite}
+        setSelected={setGigiOverBite}
       />
       <InputChoice
-        title="Gigi CrossBite"
-        enumType={GIGI_FRAKTUR}
-        selected={gigiFraktur}
-        setSelected={setGigiFraktur}
-      /> */}
+        title="Gigi Cross Bite"
+        enumType={GIGI_CROSS_BITE}
+        selected={gigiCrossBite}
+        setSelected={setGigiCrossBite}
+      />
       
       <ButtonNavigation />
     </>
