@@ -15,7 +15,12 @@ import useStateTinggiBadan from "./hooks/useStateTinggiBadan";
 import useStateButaWarna from "./hooks/useStateButaWarna";
 import useStateMinus from "./hooks/useStateMinus";
 
-// useState Kesehatan
+// useState mata
+import useStateMataRabunJauhDekat from "./hooks/kesehatan/mata/useStateMataRabunJauhDekat";
+import useStateMataKatarak from "./hooks/kesehatan/mata/useStateMataKatarak";
+import useStateMataPeteregium from "./hooks/kesehatan/mata/useStateMataPeteregium";
+
+// useState gigi
 import useStateGigiOmpong from "./hooks/kesehatan/gigi/useStateGigiOmpong";
 import useStateGigiJumlah from "./hooks/kesehatan/gigi/useStateGigiJumlah";
 import useStateGigiRapih from "./hooks/kesehatan/gigi/useStateGigiRapih";
@@ -59,7 +64,12 @@ function App() {
   const [butaWarna, setButaWarna] = useStateButaWarna();
   const [minus, setMinus] = useStateMinus();
 
-  // Kesehatan
+  // Mata
+  const [mataRabunJauhDekat, setMataRabunJauhDekat] = useStateMataRabunJauhDekat();
+  const [mataKatarak, setMataKatarak] = useStateMataKatarak();
+  const [mataPeteregium, setMataPeteregium] = useStateMataPeteregium();
+
+  // Gigi
   const [gigiOmpong, setGigiOmpong] = useStateGigiOmpong();
   const [gigiJumlah, setGigiJumlah] = useStateGigiJumlah();
   const [gigiRapih, setGigiRapih] = useStateGigiRapih();
@@ -119,29 +129,18 @@ function App() {
     setPage(data);
   }
 
-  const context: AppContextType = {
-    page,
-    setPage: setMyPage,
+  const kesehatanMata = {
+    mataRabunJauhDekat,
+    setMataRabunJauhDekat,
 
-    umur,
-    setUmur,
+    mataKatarak,
+    setMataKatarak,
 
-    sekolah,
-    setSekolah,
+    mataPeteregium,
+    setMataPeteregium
+  }
 
-    jurusan,
-    setJurusan,
-
-    tinggiBadan,
-    setTinggiBadan,
-
-    butaWarna,
-    setButaWarna,
-
-    minus,
-    setMinus,
-
-    // Kesehatan
+  const kesehatanGigi = {
     gigiOmpong,
     setGigiOmpong,
 
@@ -194,7 +193,34 @@ function App() {
     setGigiTonggos,
     
     gigiAbsesKistaTumor,
-    setGigiAbsesKistaTumor,
+    setGigiAbsesKistaTumor
+  }
+
+  const context: AppContextType = {
+    page,
+    setPage: setMyPage,
+
+    umur,
+    setUmur,
+
+    sekolah,
+    setSekolah,
+
+    jurusan,
+    setJurusan,
+
+    tinggiBadan,
+    setTinggiBadan,
+
+    butaWarna,
+    setButaWarna,
+
+    minus,
+    setMinus,
+
+    ...kesehatanMata,
+    ...kesehatanGigi,
+    
 
     wajahBercakHitam,
     setWajahBercakHitam,

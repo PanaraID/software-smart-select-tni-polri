@@ -7,6 +7,10 @@ import TINGGI_BADAN from "../finals/TINGGI_BADAN";
 import BUTA_WARNA from "../finals/BUTA_WARNA";
 import MINUS from "../finals/MINUS";
 
+import MATA_RABUN_JAUH_DEKAT from "../finals/kesehatan/mata/MATA_RABUN_JAUH_DEKAT";
+import MATA_KATARAK from "../finals/kesehatan/mata/MATA_KATARAK";
+import MATA_PETEREGIUM from "../finals/kesehatan/mata/MATA_PETEREGIUM";
+
 import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
@@ -51,6 +55,15 @@ type AppContextType = {
   setMinus: (minus: MINUS) => void;
 
   // Kesehatan
+  mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT | undefined;
+  setMataRabunJauhDekat: (mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT) => void;
+
+  mataKatarak: MATA_KATARAK | undefined;
+  setMataKatarak: (mataKatarak: MATA_KATARAK) => void;
+
+  mataPeteregium: MATA_PETEREGIUM | undefined;
+  setMataPeteregium: (mataPeteregium: MATA_PETEREGIUM) => void;
+
   gigiOmpong: GIGI_OMPONG | undefined;
   setGigiOmpong: (gigiOmpong: GIGI_OMPONG) => void;
 

@@ -10,7 +10,12 @@ enum LOCAL_STORAGE_KEY {
   BUTA_WARNA = "tni-polri-buta-warna",
   MINUS = "tni-polri-buta-minus",
 
-  // Kesehatan (Ada 18)
+  // Kesehatan 
+  MATA_KATARAK = "tni-polri-kesehatan-mata-katarak",
+  MATA_PETEREGIUM = "tni-polri-kesehatan-mata-peteregium",
+  MATA_RABUN_JAUH_DEKAT = "tni-polri-kesehatan-mata-rabun-jauh-dekat",
+  
+  // Gigi (Ada 18)
   GIGI_OMPONG = "tni-polri-kesehatan-gigi-ompong",
   GIGI_JUMLAH = "tni-polri-kesehatan-gigi-jumlah",
   GIGI_RAPIH = "tni-polri-kesehatan-gigi-rapih",
