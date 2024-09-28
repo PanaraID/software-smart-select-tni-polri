@@ -23,34 +23,28 @@ import GIGI_TONGGOS from "../../finals/kesehatan/gigi/GIGI_TONGGOS";
 import GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH from "../../finals/kesehatan/gigi/GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH";
 
 import InputChoice from "../../partials/InputChoice";
-
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 
 function CheckGigiPage() {
   const { 
-    gigiOmpong,
-    setGigiOmpong,
-
-    gigiJumlah,
-    setGigiJumlah,
-
-    gigiRapih,
-    setGigiRapih,
-
-    gigiFraktur,
-    setGigiFraktur,
-
-    gigiBerjejal,
-    setGigiBerjejal,
-
-    gigiOpenBite,
-    setGigiOpenBite,
-
-    gigiOverBite,
-    setGigiOverBite,
-
-    gigiCrossBite,
-    setGigiCrossBite
+    gigiOmpong, setGigiOmpong,
+    gigiJumlah, setGigiJumlah,
+    gigiRapih, setGigiRapih,
+    gigiFraktur, setGigiFraktur,
+    gigiBerjejal, setGigiBerjejal,
+    gigiOpenBite, setGigiOpenBite,
+    gigiOverBite, setGigiOverBite,
+    gigiCrossBite, setGigiCrossBite,
+    gigiImpaksi, setGigiImpaksi,
+    gigiRusakBerlubang, setGigiRusakBerlubang,
+    gigiBerjamur, setGigiBerjamur,
+    gigiBerjamurKuning, setGigiBerjamurKuning,
+    gigiAbrasi, setGigiAbrasi,
+    gigiPalsuLepasPasang, setGigiPalsuLepasPasang,
+    gigiBehel, setGigiBehel,
+    gigiKelainanSendi, setGigiKelainanSendi,
+    gigiTonggos, setGigiTonggos,
+    gigiAbsesKistaTumor, setGigiAbsesKistaTumor,
   } = useContext(AppContext);
 
   return (
@@ -112,6 +106,69 @@ function CheckGigiPage() {
         setSelected={setGigiCrossBite}
       />
       
+      <hr />
+
+      <InputChoice
+        title="Gigi Impaksi"
+        enumType={GIGI_IMPAKSI}
+        selected={gigiImpaksi}
+        setSelected={setGigiImpaksi}
+      />
+      <InputChoice
+        title="Gigi Rusak/Berlubang"
+        enumType={GIGI_RUSAK_BERLUBANG}
+        selected={gigiRusakBerlubang}
+        setSelected={setGigiRusakBerlubang}
+      />
+      <InputChoice
+        title="Gigi Berjamur"
+        enumType={GIGI_BERJAMUR}
+        selected={gigiBerjamur}
+        setSelected={setGigiBerjamur}
+      />
+      <InputChoice
+        title="Gigi Berjamur Kuning"
+        enumType={GIGI_BERJAMUR_KUNING}
+        selected={gigiBerjamurKuning}
+        setSelected={setGigiBerjamurKuning}
+      />
+      <InputChoice
+        title="Gigi Abrasi"
+        enumType={GIGI_ABRASI}
+        selected={gigiAbrasi}
+        setSelected={setGigiAbrasi}
+      />
+      <InputChoice
+        title="Gigi Palsu Lepas Pasang"
+        enumType={GIGI_PALSU_LEPAS_PASANG}
+        selected={gigiPalsuLepasPasang}
+        setSelected={setGigiPalsuLepasPasang}
+      />
+      <InputChoice
+        title="Gigi Behel"
+        enumType={GIGI_BEHEL}
+        selected={gigiBehel}
+        setSelected={setGigiBehel}
+      />
+      <InputChoice
+        title="Kelainan Sendi"
+        enumType={GIGI_KELAINAN_SENDI}
+        selected={gigiKelainanSendi}
+        setSelected={setGigiKelainanSendi}
+      />
+      <InputChoice
+        title="Gigi Tonggos"
+        enumType={GIGI_TONGGOS}
+        selected={gigiTonggos}
+        setSelected={setGigiTonggos}
+      />
+      <InputChoice
+        title="Abses/Kista/Tumor/Kelainan Kelenjar Ludah"
+        enumType={GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH}
+        selected={gigiAbsesKistaTumor}
+        setSelected={setGigiAbsesKistaTumor}
+      />
+
       <ButtonNavigation />
     </>
   );

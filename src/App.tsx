@@ -24,6 +24,16 @@ import useStateGigiBerjejal from "./hooks/kesehatan/gigi/useStateGigiBerjejal";
 import useStateGigiOpenBite from "./hooks/kesehatan/gigi/useStateGigiOpenBite";
 import useStateGigiOverBite from "./hooks/kesehatan/gigi/useStateGigiOverBite";
 import useStateGigiCrossBite from "./hooks/kesehatan/gigi/useStateGigiCrossBite";
+import useStateGigiRusakBerlubang from "./hooks/kesehatan/gigi/useStateGigiRusakBerlubang";
+import useStateGigiBerjamur from "./hooks/kesehatan/gigi/useStateGigiBerjamur";
+import useStateGigiBerjamurKuning from "./hooks/kesehatan/gigi/useStateGigiBerjamurKuning";
+import useStateGigiAbrasi from "./hooks/kesehatan/gigi/useStateGigiAbrasi";
+import useStateGigiPalsuLepasPasang from "./hooks/kesehatan/gigi/useStateGigiPalsuLepasPasang";
+import useStateGigiBehel from "./hooks/kesehatan/gigi/useStateGigiBehel";
+import useStateGigiKelainanSendi from "./hooks/kesehatan/gigi/useStateGigiKelainanSendi";
+import useStateGigiTonggos from "./hooks/kesehatan/gigi/useStateGigiTonggos";
+import useStateGigiAbsesKistaTumorKelainanKelenjarLudah from "./hooks/kesehatan/gigi/useStateGigiAbsesKistaTumorKelainanKelenjarLudah";
+import useStateGigiImpaksi from "./hooks/kesehatan/gigi/useStateGigiImpaksi";
 
 import useStateWajahBercakHitam from "./hooks/kesehatan/wajah/useStateWajahBercakHitam";
 
@@ -58,6 +68,16 @@ function App() {
   const [gigiOpenBite, setGigiOpenBite] = useStateGigiOpenBite();
   const [gigiOverBite, setGigiOverBite] = useStateGigiOverBite();
   const [gigiCrossBite, setGigiCrossBite] = useStateGigiCrossBite();
+  const [gigiImpaksi, setGigiImpaksi] = useStateGigiImpaksi();
+  const [gigiRusakBerlubang, setGigiRusakBerlubang] = useStateGigiRusakBerlubang();
+  const [gigiBerjamur, setGigiBerjamur] = useStateGigiBerjamur();
+  const [gigiBerjamurKuning, setGigiBerjamurKuning] = useStateGigiBerjamurKuning();
+  const [gigiAbrasi, setGigiAbrasi] = useStateGigiAbrasi();
+  const [gigiPalsuLepasPasang, setGigiPalsuLepasPasang] = useStateGigiPalsuLepasPasang();
+  const [gigiBehel, setGigiBehel] = useStateGigiBehel();
+  const [gigiKelainanSendi, setGigiKelainanSendi] = useStateGigiKelainanSendi();
+  const [gigiTonggos, setGigiTonggos] = useStateGigiTonggos();
+  const [gigiAbsesKistaTumor, setGigiAbsesKistaTumor] = useStateGigiAbsesKistaTumorKelainanKelenjarLudah();
 
   const [wajahBercakHitam, setWajahBercakHitam] = useStateWajahBercakHitam();
 
@@ -80,6 +100,16 @@ function App() {
     gigiOpenBite,
     gigiOverBite,
     gigiCrossBite,
+    gigiImpaksi,
+    gigiRusakBerlubang,
+    gigiBerjamur,
+    gigiBerjamurKuning,
+    gigiAbrasi,
+    gigiPalsuLepasPasang,
+    gigiBehel,
+    gigiKelainanSendi,
+    gigiTonggos,
+    gigiAbsesKistaTumor,
 
     wajahBercakHitam
   );
@@ -135,6 +165,36 @@ function App() {
 
     gigiCrossBite,
     setGigiCrossBite,
+
+    gigiImpaksi,
+    setGigiImpaksi,
+
+    gigiRusakBerlubang,
+    setGigiRusakBerlubang,
+
+    gigiBerjamur,
+    setGigiBerjamur,
+
+    gigiBerjamurKuning,
+    setGigiBerjamurKuning,
+
+    gigiAbrasi,
+    setGigiAbrasi,
+
+    gigiPalsuLepasPasang,
+    setGigiPalsuLepasPasang,
+
+    gigiBehel,
+    setGigiBehel,
+
+    gigiKelainanSendi,
+    setGigiKelainanSendi,
+
+    gigiTonggos,
+    setGigiTonggos,
+    
+    gigiAbsesKistaTumor,
+    setGigiAbsesKistaTumor,
 
     wajahBercakHitam,
     setWajahBercakHitam,
