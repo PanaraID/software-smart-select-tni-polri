@@ -1,6 +1,6 @@
 enum MATA_PETEREGIUM {
-  IYA = "IYA",
-  TIDAK = "TIDAK"
+  IYA = "Iya",
+  TIDAK = "Tidak"
 }
 
 export default MATA_PETEREGIUM;

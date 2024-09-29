@@ -7,7 +7,12 @@ import TINGGI_BADAN from "../finals/TINGGI_BADAN";
 import BUTA_WARNA from "../finals/BUTA_WARNA";
 import MINUS from "../finals/MINUS";
 
-// Kesehatan
+// Kesehatan Mata
+import MATA_RABUN_JAUH_DEKAT from "../finals/kesehatan/mata/MATA_RABUN_JAUH_DEKAT";
+import MATA_KATARAK from "../finals/kesehatan/mata/MATA_KATARAK";
+import MATA_PETEREGIUM from "../finals/kesehatan/mata/MATA_PETEREGIUM";
+
+// Kesehatan Gigi
 import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
@@ -41,6 +46,10 @@ function useEffectSaveCheck(
   minus: MINUS | undefined,
 
   // Kesehatan
+  mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT | undefined,
+  mataKatarak: MATA_KATARAK | undefined,
+  mataPeteregium: MATA_PETEREGIUM | undefined,
+
   gigiOmpong: GIGI_OMPONG | undefined,
   gigiJumlah: GIGI_JUMLAH | undefined,
   gigiRapih: GIGI_RAPIH | undefined,
@@ -70,7 +79,12 @@ function useEffectSaveCheck(
     localStorage.setItem(LOCAL_STORAGE_KEY.BUTA_WARNA, butaWarna || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.MINUS, minus || "");
 
-    // Kesehatan
+    // Kesehatan Gigi
+    localStorage.setItem(LOCAL_STORAGE_KEY.MATA_RABUN_JAUH_DEKAT, mataRabunJauhDekat || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.MATA_KATARAK, mataKatarak || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.MATA_PETEREGIUM, mataPeteregium || "");
+
+    // Kesehatan Gigi
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_OMPONG, gigiOmpong || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_JUMLAH, gigiJumlah || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_RAPIH, gigiRapih || "");
@@ -90,7 +104,6 @@ function useEffectSaveCheck(
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_TONGGOS, gigiTonggos || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH, gigiAbsesKistaTumor || "");
 
-
     localStorage.setItem(
       LOCAL_STORAGE_KEY.WAJAH_BERCAK_HITAM,
       wajahBercakHitam || ""
@@ -104,7 +117,12 @@ function useEffectSaveCheck(
     butaWarna,
     minus,
 
-    // Kesehatan
+    // Kesehatan Mata
+    mataRabunJauhDekat,
+    mataKatarak,
+    mataPeteregium,
+
+    // Kesehatan Gigi
     gigiOmpong,
     gigiJumlah,
     gigiRapih,

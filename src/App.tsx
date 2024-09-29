@@ -102,6 +102,10 @@ function App() {
     minus,
 
     // Kesehatan
+    mataRabunJauhDekat,
+    mataKatarak,
+    mataPeteregium,
+    
     gigiOmpong,
     gigiJumlah,
     gigiRapih,
