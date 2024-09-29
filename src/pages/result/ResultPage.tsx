@@ -3,8 +3,8 @@
 
 import Header from "../../partials/Header";
 
-import CardDataGeneral from "./partials/CardDataGeneral";
-import CardCheckKesehatan from "./partials/CardCheckKesehatan";
+import CardDataGeneral from "./sections/CardDataGeneral";
+import CardCheckKesehatan from "./sections/CardCheckKesehatan";
 // import CardUserRecommendation from "./partials/CardUserRecommendation";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";

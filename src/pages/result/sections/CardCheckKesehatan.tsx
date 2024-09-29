@@ -7,8 +7,8 @@ import WAJAH_BERCAK_HITAM from "../../../finals/kesehatan/wajah/WAJAH_BERCAK_HIT
 
 import GIGI_OMPONG from "../../../finals/kesehatan/gigi/GIGI_OMPONG";
 
-import Filled from "./Filled";
-import NotFilled from "./NotFilled";
+import Filled from "../partials/Filled";
+import NotFilled from "../partials/NotFilled";
 
 function CardCheckKesehatan() {
   const { wajahBercakHitam, gigiOmpong } = useContext(AppContext);

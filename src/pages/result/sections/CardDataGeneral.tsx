@@ -9,8 +9,8 @@ import JURUSAN from "../../../finals/JURUSAN";
 import BUTA_WARNA from "../../../finals/BUTA_WARNA";
 import MINUS from "../../../finals/MINUS";
 
-import Filled from "./Filled";
-import NotFilled from "./NotFilled";
+import Filled from "../partials/Filled";
+import NotFilled from "../partials/NotFilled";
 
 function CardDataGeneral() {
   const { umur, sekolah, jurusan, butaWarna, minus } = useContext(AppContext);
