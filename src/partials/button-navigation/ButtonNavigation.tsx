@@ -1,8 +1,12 @@
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-import ButtonNavigationType from "./ButtonNavigationType";
 import TheButtonNavigation from "./TheButtonNavigation";
 import BackButtonNavigation from "./BackButtonNavigation";
+
+type ButtonNavigationType = {
+  text: string;
+  action: () => void;
+}
 
 type PropsType = {
   // Kalau tidak diisi maka defaultnya adalah tombol mundur
