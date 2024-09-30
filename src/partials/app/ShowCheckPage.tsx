@@ -1,6 +1,7 @@
 import PAGES from "../../finals/basic/PAGES";
 
 import CheckKesehatanPage from "../../pages/check/CheckKesehatanPage";
+import CheckKesehatanTambahanPage from "../../pages/check/CheckKesehatanTambahanPage";
 import CheckMataPage from "../../pages/check/CheckMataPage";
 import CheckWajahPage from "../../pages/check/CheckWajahPage";
 import CheckGigiPage from "../../pages/check/CheckGigiPage";
@@ -13,6 +14,8 @@ function ShowCheckPage(props: PropsType) {
   switch (props.page) {
     case PAGES.CHECK_KESEHATAN:
       return <CheckKesehatanPage />;
+    case PAGES.CHECK_KESEHATAN_TAMBAHAN:
+      return <CheckKesehatanTambahanPage />;
     case PAGES.CHECK_MATA:
         return <CheckMataPage />;
     case PAGES.CHECK_WAJAH:

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Button } from "react-bootstrap";
 
 import AppContext from "../../context/AppContext";
 import PAGES from "../../finals/basic/PAGES";
@@ -37,7 +38,7 @@ function HomePage() {
     setButaWarna,
 
     minus,
-    setMinus
+    setMinus,
   } = useContext(AppContext);
 
   return (
@@ -82,11 +83,13 @@ function HomePage() {
         setSelected={setMinus}
       />
 
-      {/* <div>
-        <Button onClick={() => setPage(PAGES.DEV)} variant="info">
-          (SEMENTARA) Menuju Halaman Pengembang
-        </Button>
-      </div> */}
+      <Button
+        className="mt-3"
+        onClick={() => setPage(PAGES.CHECK_KESEHATAN_TAMBAHAN)}
+        variant="info"
+      >
+        Kesehatan Tambahan Lainnya
+      </Button>
 
       <ButtonNavigation
         button1={{
