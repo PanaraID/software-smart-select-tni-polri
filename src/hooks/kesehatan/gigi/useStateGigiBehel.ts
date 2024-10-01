@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 import LOCAL_STORAGE_KEY from "../../../finals/basic/LOCAL_STORAGE_KEY";
-import GIGI_BEHEL from "../../../finals/kesehatan/gigi/GIGI_BEHEL";
+import YES_OR_NO from "../../../finals/basic/YES_OR_NO";
 
 function useStateGigiBehel(): [
-  GIGI_BEHEL | undefined,
-  React.Dispatch<React.SetStateAction<GIGI_BEHEL | undefined>>
+  YES_OR_NO | undefined,
+  React.Dispatch<React.SetStateAction<YES_OR_NO | undefined>>
 ] {
-  return useState<GIGI_BEHEL | undefined>(() => {
+  return useState<YES_OR_NO | undefined>(() => {
     const storedPage = localStorage.getItem(LOCAL_STORAGE_KEY.GIGI_BEHEL);
-    return storedPage && Object.keys(GIGI_BEHEL).includes(storedPage as GIGI_BEHEL)
-      ? (storedPage as GIGI_BEHEL)
+    return storedPage && Object.keys(YES_OR_NO).includes(storedPage as YES_OR_NO)
+      ? (storedPage as YES_OR_NO)
       : undefined;
   });
 }

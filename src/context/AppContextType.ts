@@ -1,5 +1,7 @@
 import PAGES from "../finals/basic/PAGES";
 
+import YES_OR_NO from "../finals/basic/YES_OR_NO";
+
 import UMUR from "../finals/UMUR";
 import SEKOLAH from "../finals/SEKOLAH";
 import JURUSAN from "../finals/JURUSAN";
@@ -15,19 +17,6 @@ import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
-import GIGI_BERJEJAL from "../finals/kesehatan/gigi/GIGI_BERJEJAL";
-import GIGI_OPEN_BITE from "../finals/kesehatan/gigi/GIGI_OPEN_BITE";
-import GIGI_CROSS_BITE from "../finals/kesehatan/gigi/GIGI_CROSS_BITE";
-import GIGI_IMPAKSI from "../finals/kesehatan/gigi/GIGI_IMPAKSI";
-import GIGI_RUSAK_BERLUBANG from "../finals/kesehatan/gigi/GIGI_RUSAK_BERLUBANG";
-import GIGI_BERJAMUR from "../finals/kesehatan/gigi/GIGI_BERJAMUR";
-import GIGI_BERJAMUR_KUNING from "../finals/kesehatan/gigi/GIGI_BERJAMUR_KUNING";
-import GIGI_ABRASI from "../finals/kesehatan/gigi/GIGI_ABRASI";
-import GIGI_PALSU_LEPAS_PASANG from "../finals/kesehatan/gigi/GIGI_PALSU_LEPAS_PASANG";
-import GIGI_BEHEL from "../finals/kesehatan/gigi/GIGI_BEHEL";
-import GIGI_KELAINAN_SENDI from "../finals/kesehatan/gigi/GIGI_KELAINAN_SENDI";
-import GIGI_TONGGOS from "../finals/kesehatan/gigi/GIGI_TONGGOS";
-import GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH from "../finals/kesehatan/gigi/GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH";
 
 import WAJAH_BERCAK_HITAM from "../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
 
@@ -76,47 +65,47 @@ type AppContextType = {
   gigiFraktur: GIGI_FRAKTUR | undefined;
   setGigiFraktur: (gigiFraktur: GIGI_FRAKTUR) => void;
 
-  gigiBerjejal: GIGI_BERJEJAL | undefined;
-  setGigiBerjejal: (gigiBerjejal: GIGI_BERJEJAL) => void;
+  gigiBerjejal: YES_OR_NO | undefined;
+  setGigiBerjejal: (gigiBerjejal: YES_OR_NO) => void;
 
-  gigiOpenBite: GIGI_OPEN_BITE | undefined;
-  setGigiOpenBite: (gigiOpenBite: GIGI_OPEN_BITE) => void;
+  gigiOpenBite: YES_OR_NO | undefined;
+  setGigiOpenBite: (gigiOpenBite: YES_OR_NO) => void;
 
-  gigiOverBite: GIGI_OPEN_BITE | undefined;
-  setGigiOverBite: (gigiOverBite: GIGI_OPEN_BITE) => void;
+  gigiOverBite: YES_OR_NO | undefined;
+  setGigiOverBite: (gigiOverBite: YES_OR_NO) => void;
 
-  gigiCrossBite: GIGI_CROSS_BITE | undefined;
-  setGigiCrossBite: (gigiCrossBite: GIGI_CROSS_BITE) => void;
+  gigiCrossBite: YES_OR_NO | undefined;
+  setGigiCrossBite: (gigiCrossBite: YES_OR_NO) => void;
 
-  gigiImpaksi: GIGI_IMPAKSI | undefined;
-  setGigiImpaksi: (gigiImpaksi: GIGI_IMPAKSI) => void;
+  gigiImpaksi: YES_OR_NO | undefined;
+  setGigiImpaksi: (gigiImpaksi: YES_OR_NO) => void;
 
-  gigiRusakBerlubang: GIGI_RUSAK_BERLUBANG | undefined;
-  setGigiRusakBerlubang: (gigiRusakBerlubang: GIGI_RUSAK_BERLUBANG) => void;
+  gigiRusakBerlubang: YES_OR_NO | undefined;
+  setGigiRusakBerlubang: (gigiRusakBerlubang: YES_OR_NO) => void;
 
-  gigiBerjamur: GIGI_BERJAMUR | undefined;
-  setGigiBerjamur: (gigiBerjamur: GIGI_BERJAMUR) => void;
+  gigiBerjamur: YES_OR_NO | undefined;
+  setGigiBerjamur: (gigiBerjamur: YES_OR_NO) => void;
 
-  gigiBerjamurKuning: GIGI_BERJAMUR_KUNING | undefined;
-  setGigiBerjamurKuning: (gigiBerjamurKuning: GIGI_BERJAMUR_KUNING) => void;
+  gigiBerjamurKuning: YES_OR_NO | undefined;
+  setGigiBerjamurKuning: (gigiBerjamurKuning: YES_OR_NO) => void;
 
-  gigiAbrasi: GIGI_ABRASI | undefined;
-  setGigiAbrasi: (gigiAbrasi: GIGI_ABRASI) => void;
+  gigiAbrasi: YES_OR_NO | undefined;
+  setGigiAbrasi: (gigiAbrasi: YES_OR_NO) => void;
 
-  gigiPalsuLepasPasang: GIGI_PALSU_LEPAS_PASANG | undefined;
-  setGigiPalsuLepasPasang: (gigiPalsuLepasPasang: GIGI_PALSU_LEPAS_PASANG) => void;
+  gigiPalsuLepasPasang: YES_OR_NO | undefined;
+  setGigiPalsuLepasPasang: (gigiPalsuLepasPasang: YES_OR_NO) => void;
 
-  gigiBehel: GIGI_BEHEL | undefined;
-  setGigiBehel: (gigiBehel: GIGI_BEHEL) => void;
+  gigiBehel: YES_OR_NO | undefined;
+  setGigiBehel: (gigiBehel: YES_OR_NO) => void;
 
-  gigiKelainanSendi: GIGI_KELAINAN_SENDI | undefined;
-  setGigiKelainanSendi: (gigiKelainanSendi: GIGI_KELAINAN_SENDI) => void;
+  gigiKelainanSendi: YES_OR_NO | undefined;
+  setGigiKelainanSendi: (gigiKelainanSendi: YES_OR_NO) => void;
 
-  gigiTonggos: GIGI_TONGGOS | undefined;
-  setGigiTonggos: (gigiTonggos: GIGI_TONGGOS) => void;
+  gigiTonggos: YES_OR_NO | undefined;
+  setGigiTonggos: (gigiTonggos: YES_OR_NO) => void;
 
-  gigiAbsesKistaTumor: GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH | undefined;
-  setGigiAbsesKistaTumor: (gigiAbsesKistaTumor: GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH) => void;
+  gigiAbsesKistaTumor: YES_OR_NO | undefined;
+  setGigiAbsesKistaTumor: (gigiAbsesKistaTumor: YES_OR_NO) => void;
 
   wajahBercakHitam: WAJAH_BERCAK_HITAM | undefined;
   setWajahBercakHitam: (wajahBercakHitam: WAJAH_BERCAK_HITAM) => void;

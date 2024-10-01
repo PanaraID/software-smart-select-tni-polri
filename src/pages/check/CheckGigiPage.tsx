@@ -7,20 +7,7 @@ import GIGI_OMPONG from "../../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../../finals/kesehatan/gigi/GIGI_FRAKTUR";
-import GIGI_BERJEJAL from "../../finals/kesehatan/gigi/GIGI_BERJEJAL";
-import GIGI_OPEN_BITE from "../../finals/kesehatan/gigi/GIGI_OPEN_BITE";
-import GIGI_OVER_BITE from "../../finals/kesehatan/gigi/GIGI_OVER_BITE";
-import GIGI_CROSS_BITE from "../../finals/kesehatan/gigi/GIGI_CROSS_BITE";
-import GIGI_IMPAKSI from "../../finals/kesehatan/gigi/GIGI_IMPAKSI";
-import GIGI_RUSAK_BERLUBANG from "../../finals/kesehatan/gigi/GIGI_RUSAK_BERLUBANG";
-import GIGI_BERJAMUR from "../../finals/kesehatan/gigi/GIGI_BERJAMUR";
-import GIGI_BERJAMUR_KUNING from "../../finals/kesehatan/gigi/GIGI_BERJAMUR_KUNING";
-import GIGI_ABRASI from "../../finals/kesehatan/gigi/GIGI_ABRASI";
-import GIGI_PALSU_LEPAS_PASANG from "../../finals/kesehatan/gigi/GIGI_PALSU_LEPAS_PASANG";
-import GIGI_BEHEL from "../../finals/kesehatan/gigi/GIGI_BEHEL";
-import GIGI_KELAINAN_SENDI from "../../finals/kesehatan/gigi/GIGI_KELAINAN_SENDI";
-import GIGI_TONGGOS from "../../finals/kesehatan/gigi/GIGI_TONGGOS";
-import GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH from "../../finals/kesehatan/gigi/GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH";
+import YES_OR_NO from "../../finals/basic/YES_OR_NO";
 
 import InputChoice from "../../partials/InputChoice";
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
@@ -83,25 +70,25 @@ function CheckGigiPage() {
       
       <InputChoice
         title="Gigi Crowding/Berjejal"
-        enumType={GIGI_BERJEJAL}
+        enumType={YES_OR_NO}
         selected={gigiBerjejal}
         setSelected={setGigiBerjejal}
       />
       <InputChoice
         title="Gigi Open Bite"
-        enumType={GIGI_OPEN_BITE}
+        enumType={YES_OR_NO}
         selected={gigiOpenBite}
         setSelected={setGigiOpenBite}
       />
       <InputChoice
         title="Gigi Over Bite"
-        enumType={GIGI_OVER_BITE}
+        enumType={YES_OR_NO}
         selected={gigiOverBite}
         setSelected={setGigiOverBite}
       />
       <InputChoice
         title="Gigi Cross Bite"
-        enumType={GIGI_CROSS_BITE}
+        enumType={YES_OR_NO}
         selected={gigiCrossBite}
         setSelected={setGigiCrossBite}
       />
@@ -110,61 +97,61 @@ function CheckGigiPage() {
 
       <InputChoice
         title="Gigi Impaksi"
-        enumType={GIGI_IMPAKSI}
+        enumType={YES_OR_NO}
         selected={gigiImpaksi}
         setSelected={setGigiImpaksi}
       />
       <InputChoice
         title="Gigi Rusak/Berlubang"
-        enumType={GIGI_RUSAK_BERLUBANG}
+        enumType={YES_OR_NO}
         selected={gigiRusakBerlubang}
         setSelected={setGigiRusakBerlubang}
       />
       <InputChoice
         title="Gigi Berjamur"
-        enumType={GIGI_BERJAMUR}
+        enumType={YES_OR_NO}
         selected={gigiBerjamur}
         setSelected={setGigiBerjamur}
       />
       <InputChoice
         title="Gigi Berjamur Kuning"
-        enumType={GIGI_BERJAMUR_KUNING}
+        enumType={YES_OR_NO}
         selected={gigiBerjamurKuning}
         setSelected={setGigiBerjamurKuning}
       />
       <InputChoice
         title="Gigi Abrasi"
-        enumType={GIGI_ABRASI}
+        enumType={YES_OR_NO}
         selected={gigiAbrasi}
         setSelected={setGigiAbrasi}
       />
       <InputChoice
         title="Gigi Palsu Lepas Pasang"
-        enumType={GIGI_PALSU_LEPAS_PASANG}
+        enumType={YES_OR_NO}
         selected={gigiPalsuLepasPasang}
         setSelected={setGigiPalsuLepasPasang}
       />
       <InputChoice
         title="Gigi Behel"
-        enumType={GIGI_BEHEL}
+        enumType={YES_OR_NO}
         selected={gigiBehel}
         setSelected={setGigiBehel}
       />
       <InputChoice
         title="Kelainan Sendi"
-        enumType={GIGI_KELAINAN_SENDI}
+        enumType={YES_OR_NO}
         selected={gigiKelainanSendi}
         setSelected={setGigiKelainanSendi}
       />
       <InputChoice
         title="Gigi Tonggos"
-        enumType={GIGI_TONGGOS}
+        enumType={YES_OR_NO}
         selected={gigiTonggos}
         setSelected={setGigiTonggos}
       />
       <InputChoice
         title="Abses/Kista/Tumor/Kelainan Kelenjar Ludah"
-        enumType={GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH}
+        enumType={YES_OR_NO}
         selected={gigiAbsesKistaTumor}
         setSelected={setGigiAbsesKistaTumor}
       />

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 import LOCAL_STORAGE_KEY from "../../../finals/basic/LOCAL_STORAGE_KEY";
-import GIGI_PALSU_LEPAS_PASANG from "../../../finals/kesehatan/gigi/GIGI_PALSU_LEPAS_PASANG";
+import YES_OR_NO from "../../../finals/basic/YES_OR_NO";
 
 function useStateGigiPalsuLepasPasang(): [
-  GIGI_PALSU_LEPAS_PASANG | undefined,
-  React.Dispatch<React.SetStateAction<GIGI_PALSU_LEPAS_PASANG | undefined>>
+  YES_OR_NO | undefined,
+  React.Dispatch<React.SetStateAction<YES_OR_NO | undefined>>
 ] {
-  return useState<GIGI_PALSU_LEPAS_PASANG | undefined>(() => {
+  return useState<YES_OR_NO | undefined>(() => {
     const storedPage = localStorage.getItem(LOCAL_STORAGE_KEY.GIGI_PALSU_LEPAS_PASANG);
-    return storedPage && Object.keys(GIGI_PALSU_LEPAS_PASANG).includes(storedPage as GIGI_PALSU_LEPAS_PASANG)
-      ? (storedPage as GIGI_PALSU_LEPAS_PASANG)
+    return storedPage && Object.keys(YES_OR_NO).includes(storedPage as YES_OR_NO)
+      ? (storedPage as YES_OR_NO)
       : undefined;
   });
 }

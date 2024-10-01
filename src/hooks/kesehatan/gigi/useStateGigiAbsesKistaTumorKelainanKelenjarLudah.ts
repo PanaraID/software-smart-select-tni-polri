@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 import LOCAL_STORAGE_KEY from "../../../finals/basic/LOCAL_STORAGE_KEY";
-import GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH from "../../../finals/kesehatan/gigi/GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH";
+import YES_OR_NO from "../../../finals/basic/YES_OR_NO";
 
 function useStateGigiAbsesKistaTumorKelainanKelenjarLudah(): [
-  GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH | undefined,
-  React.Dispatch<React.SetStateAction<GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH | undefined>>
+  YES_OR_NO | undefined,
+  React.Dispatch<React.SetStateAction<YES_OR_NO | undefined>>
 ] {
-  return useState<GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH | undefined>(() => {
+  return useState<YES_OR_NO | undefined>(() => {
     const storedPage = localStorage.getItem(LOCAL_STORAGE_KEY.GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH);
-    return storedPage && Object.keys(GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH).includes(storedPage as GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH)
-      ? (storedPage as GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH)
+    return storedPage && Object.keys(YES_OR_NO).includes(storedPage as YES_OR_NO)
+      ? (storedPage as YES_OR_NO)
       : undefined;
   });
 }
