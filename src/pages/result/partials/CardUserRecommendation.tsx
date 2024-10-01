@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import AppContext from "../../../context/AppContext";
 
-import BUTA_WARNA from "../../../finals/BUTA_WARNA";
+import YES_OR_NO from "../../../finals/basic/YES_OR_NO";
 import MINUS from "../../../finals/MINUS";
 
 import {Button, Card, ListGroup, ListGroupItem} from "react-bootstrap";
 import AllDataNotFilled from "./AllDataNotFilled";
 import PAGES from "../../../finals/basic/PAGES";
 
-function isFilledAll(butaWarna: BUTA_WARNA | undefined, minus: MINUS | undefined): boolean {
+function isFilledAll(butaWarna: YES_OR_NO | undefined, minus: MINUS | undefined): boolean {
   // Memastikan semua data diisi
   return butaWarna !== undefined && minus !== undefined;
 }
