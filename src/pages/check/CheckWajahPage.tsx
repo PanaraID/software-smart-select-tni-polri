@@ -3,7 +3,7 @@ import { useContext } from "react";
 import AppContext from "../../context/AppContext";
 import Header from "../../partials/Header.tsx";
 
-import WAJAH_BERCAK_HITAM from "../../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
+import YES_OR_NO from "../../finals/basic/YES_OR_NO.ts";
 
 import InputChoice from "../../partials/InputChoice";
 
@@ -18,7 +18,7 @@ function CheckWajahPage() {
 
       <InputChoice
         title="Wajah Bercak Hitam"
-        enumType={WAJAH_BERCAK_HITAM}
+        enumType={YES_OR_NO}
         selected={wajahBercakHitam}
         setSelected={setWajahBercakHitam}
       />

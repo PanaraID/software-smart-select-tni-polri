@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY";
-import BUTA_WARNA from "../finals/BUTA_WARNA";
+import YES_OR_NO from "../finals/basic/YES_OR_NO";
 
 function useStateButaWarna(): [
-  BUTA_WARNA | undefined,
-  React.Dispatch<React.SetStateAction<BUTA_WARNA | undefined>>
+  YES_OR_NO | undefined,
+  React.Dispatch<React.SetStateAction<YES_OR_NO | undefined>>
 ] {
-  return useState<BUTA_WARNA | undefined>(() => {
+  return useState<YES_OR_NO | undefined>(() => {
     const storedPage = localStorage.getItem(LOCAL_STORAGE_KEY.BUTA_WARNA);
     return storedPage &&
-      Object.keys(BUTA_WARNA).includes(storedPage as BUTA_WARNA)
-      ? (storedPage as BUTA_WARNA)
+      Object.keys(YES_OR_NO).includes(storedPage as YES_OR_NO)
+      ? (storedPage as YES_OR_NO)
       : undefined;
   });
 }

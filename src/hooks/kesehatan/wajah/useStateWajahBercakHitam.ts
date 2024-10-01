@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 import LOCAL_STORAGE_KEY from "../../../finals/basic/LOCAL_STORAGE_KEY";
-import WAJAH_BERCAK_HITAM from "../../../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
+import YES_OR_NO from "../../../finals/basic/YES_OR_NO";
 
 function useStateWajahBercakHitam(): [
-  WAJAH_BERCAK_HITAM | undefined,
-  React.Dispatch<React.SetStateAction<WAJAH_BERCAK_HITAM | undefined>>
+  YES_OR_NO | undefined,
+  React.Dispatch<React.SetStateAction<YES_OR_NO | undefined>>
 ] {
-  return useState<WAJAH_BERCAK_HITAM | undefined>(() => {
+  return useState<YES_OR_NO | undefined>(() => {
     const storedPage = localStorage.getItem(LOCAL_STORAGE_KEY.WAJAH_BERCAK_HITAM);
-    return storedPage && Object.keys(WAJAH_BERCAK_HITAM).includes(storedPage as WAJAH_BERCAK_HITAM)
-      ? (storedPage as WAJAH_BERCAK_HITAM)
+    return storedPage && Object.keys(YES_OR_NO).includes(storedPage as YES_OR_NO)
+      ? (storedPage as YES_OR_NO)
       : undefined;
   });
 }

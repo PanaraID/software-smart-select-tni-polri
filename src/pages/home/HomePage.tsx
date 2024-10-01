@@ -7,11 +7,11 @@ import PAGES from "../../finals/basic/PAGES";
 import HomeHeader from "./partials/HomeHeader";
 import Header from "../../partials/Header";
 
+import YES_OR_NO from "../../finals/basic/YES_OR_NO";
 import UMUR from "../../finals/UMUR";
 import SEKOLAH from "../../finals/SEKOLAH";
 import JURUSAN from "../../finals/JURUSAN";
 import TINGGI_BADAN from "../../finals/TINGGI_BADAN";
-import BUTA_WARNA from "../../finals/BUTA_WARNA";
 import MINUS from "../../finals/MINUS";
 
 import InputChoice from "../../partials/InputChoice";
@@ -72,7 +72,7 @@ function HomePage() {
       />
       <InputChoice
         title="Buta Warna"
-        enumType={BUTA_WARNA}
+        enumType={YES_OR_NO}
         selected={butaWarna}
         setSelected={setButaWarna}
       />

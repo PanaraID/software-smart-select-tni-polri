@@ -3,10 +3,10 @@ import AppContext from "../../../context/AppContext";
 
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
+import YES_OR_NO from "../../../finals/basic/YES_OR_NO";
 import UMUR from "../../../finals/UMUR";
 import SEKOLAH from "../../../finals/SEKOLAH";
 import JURUSAN from "../../../finals/JURUSAN";
-import BUTA_WARNA from "../../../finals/BUTA_WARNA";
 import MINUS from "../../../finals/MINUS";
 
 import Filled from "../partials/Filled";
@@ -18,7 +18,7 @@ function CardDataGeneral() {
   const theUmur = UMUR[umur as unknown as keyof typeof UMUR];
   const theSekolah = SEKOLAH[sekolah as unknown as keyof typeof SEKOLAH];
   const theJurusan = JURUSAN[jurusan as unknown as keyof typeof JURUSAN];
-  const theButaWarna = BUTA_WARNA[butaWarna as unknown as keyof typeof BUTA_WARNA];
+  const theButaWarna = YES_OR_NO[butaWarna as unknown as keyof typeof YES_OR_NO];
   const theMinus = MINUS[minus as unknown as keyof typeof MINUS];
 
   return (

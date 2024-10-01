@@ -1,10 +1,9 @@
 import { useContext } from "react";
-import AppContext from "../../../context/AppContext";
-
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
-import WAJAH_BERCAK_HITAM from "../../../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
+import AppContext from "../../../context/AppContext";
 
+import YES_OR_NO from "../../../finals/basic/YES_OR_NO";
 import GIGI_OMPONG from "../../../finals/kesehatan/gigi/GIGI_OMPONG";
 
 import Filled from "../partials/Filled";
@@ -14,8 +13,8 @@ function CardCheckKesehatan() {
   const { wajahBercakHitam, gigiOmpong } = useContext(AppContext);
 
   const theWajahBercakHitam =
-    WAJAH_BERCAK_HITAM[
-      wajahBercakHitam as unknown as keyof typeof WAJAH_BERCAK_HITAM
+    YES_OR_NO[
+      wajahBercakHitam as unknown as keyof typeof YES_OR_NO
     ];
   const theGigiOmpong =
     GIGI_OMPONG[

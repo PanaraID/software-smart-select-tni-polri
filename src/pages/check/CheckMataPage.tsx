@@ -4,8 +4,7 @@ import AppContext from "../../context/AppContext";
 import Header from "../../partials/Header";
 
 import MATA_RABUN_JAUH_DEKAT from "../../finals/kesehatan/mata/MATA_RABUN_JAUH_DEKAT";
-import MATA_KATARAK from "../../finals/kesehatan/mata/MATA_KATARAK";
-import MATA_PETEREGIUM from "../../finals/kesehatan/mata/MATA_PETEREGIUM";
+import YES_OR_NO from "../../finals/basic/YES_OR_NO";
 
 import InputChoice from "../../partials/InputChoice";
 
@@ -35,13 +34,13 @@ function CheckMataPage() {
       />
       <InputChoice
         title="Mata Katarak"
-        enumType={MATA_KATARAK}
+        enumType={YES_OR_NO}
         selected={mataKatarak}
         setSelected={setMataKatarak}
       />
       <InputChoice
         title="Mata Peteregium"
-        enumType={MATA_PETEREGIUM}
+        enumType={YES_OR_NO}
         selected={mataPeteregium}
         setSelected={setMataPeteregium}
       />

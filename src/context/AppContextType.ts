@@ -6,19 +6,14 @@ import UMUR from "../finals/UMUR";
 import SEKOLAH from "../finals/SEKOLAH";
 import JURUSAN from "../finals/JURUSAN";
 import TINGGI_BADAN from "../finals/TINGGI_BADAN";
-import BUTA_WARNA from "../finals/BUTA_WARNA";
 import MINUS from "../finals/MINUS";
 
 import MATA_RABUN_JAUH_DEKAT from "../finals/kesehatan/mata/MATA_RABUN_JAUH_DEKAT";
-import MATA_KATARAK from "../finals/kesehatan/mata/MATA_KATARAK";
-import MATA_PETEREGIUM from "../finals/kesehatan/mata/MATA_PETEREGIUM";
 
 import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
-
-import WAJAH_BERCAK_HITAM from "../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
 
 type AppContextType = {
   // Basic
@@ -37,8 +32,8 @@ type AppContextType = {
   tinggiBadan: TINGGI_BADAN | undefined;
   setTinggiBadan: (tinggiBadan: TINGGI_BADAN) => void;
 
-  butaWarna: BUTA_WARNA | undefined;
-  setButaWarna: (butaWarna: BUTA_WARNA) => void;
+  butaWarna: YES_OR_NO | undefined;
+  setButaWarna: (butaWarna: YES_OR_NO) => void;
 
   minus: MINUS | undefined;
   setMinus: (minus: MINUS) => void;
@@ -47,11 +42,11 @@ type AppContextType = {
   mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT | undefined;
   setMataRabunJauhDekat: (mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT) => void;
 
-  mataKatarak: MATA_KATARAK | undefined;
-  setMataKatarak: (mataKatarak: MATA_KATARAK) => void;
+  mataKatarak: YES_OR_NO | undefined;
+  setMataKatarak: (mataKatarak: YES_OR_NO) => void;
 
-  mataPeteregium: MATA_PETEREGIUM | undefined;
-  setMataPeteregium: (mataPeteregium: MATA_PETEREGIUM) => void;
+  mataPeteregium: YES_OR_NO | undefined;
+  setMataPeteregium: (mataPeteregium: YES_OR_NO) => void;
 
   gigiOmpong: GIGI_OMPONG | undefined;
   setGigiOmpong: (gigiOmpong: GIGI_OMPONG) => void;
@@ -107,8 +102,8 @@ type AppContextType = {
   gigiAbsesKistaTumor: YES_OR_NO | undefined;
   setGigiAbsesKistaTumor: (gigiAbsesKistaTumor: YES_OR_NO) => void;
 
-  wajahBercakHitam: WAJAH_BERCAK_HITAM | undefined;
-  setWajahBercakHitam: (wajahBercakHitam: WAJAH_BERCAK_HITAM) => void;
+  wajahBercakHitam: YES_OR_NO | undefined;
+  setWajahBercakHitam: (wajahBercakHitam: YES_OR_NO) => void;
 };
 
 export default AppContextType;
