@@ -1,39 +1,21 @@
 import { useEffect } from "react";
 
+import YES_OR_NO from "../finals/basic/YES_OR_NO";
+
 import UMUR from "../finals/UMUR";
 import SEKOLAH from "../finals/SEKOLAH";
 import JURUSAN from "../finals/JURUSAN";
 import TINGGI_BADAN from "../finals/TINGGI_BADAN";
-import BUTA_WARNA from "../finals/BUTA_WARNA";
 import MINUS from "../finals/MINUS";
 
 // Kesehatan Mata
 import MATA_RABUN_JAUH_DEKAT from "../finals/kesehatan/mata/MATA_RABUN_JAUH_DEKAT";
-import MATA_KATARAK from "../finals/kesehatan/mata/MATA_KATARAK";
-import MATA_PETEREGIUM from "../finals/kesehatan/mata/MATA_PETEREGIUM";
 
 // Kesehatan Gigi
 import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
-import GIGI_BERJEJAL from "../finals/kesehatan/gigi/GIGI_BERJEJAL";
-import GIGI_OPEN_BITE from "../finals/kesehatan/gigi/GIGI_OPEN_BITE";
-import GIGI_OVER_BITE from "../finals/kesehatan/gigi/GIGI_OVER_BITE";
-import GIGI_CROSS_BITE from "../finals/kesehatan/gigi/GIGI_CROSS_BITE";
-import GIGI_IMPAKSI from "../finals/kesehatan/gigi/GIGI_IMPAKSI";
-import GIGI_RUSAK_BERLUBANG from "../finals/kesehatan/gigi/GIGI_RUSAK_BERLUBANG";
-import GIGI_BERJAMUR from "../finals/kesehatan/gigi/GIGI_BERJAMUR";
-import GIGI_BERJAMUR_KUNING from "../finals/kesehatan/gigi/GIGI_BERJAMUR_KUNING";
-import GIGI_ABRASI from "../finals/kesehatan/gigi/GIGI_ABRASI";
-import GIGI_PALSU_LEPAS_PASANG from "../finals/kesehatan/gigi/GIGI_PALSU_LEPAS_PASANG";
-import GIGI_BEHEL from "../finals/kesehatan/gigi/GIGI_BEHEL";
-import GIGI_KELAINAN_SENDI from "../finals/kesehatan/gigi/GIGI_KELAINAN_SENDI";
-import GIGI_TONGGOS from "../finals/kesehatan/gigi/GIGI_TONGGOS";
-import GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH from "../finals/kesehatan/gigi/GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH";
-
-
-import WAJAH_BERCAK_HITAM from "../finals/kesehatan/wajah/WAJAH_BERCAK_HITAM";
 
 import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY";
 
@@ -42,34 +24,40 @@ function useEffectSaveCheck(
   sekolah: SEKOLAH | undefined,
   jurusan: JURUSAN | undefined,
   tinggiBadan: TINGGI_BADAN | undefined,
-  butaWarna: BUTA_WARNA | undefined,
+  butaWarna: YES_OR_NO | undefined,
   minus: MINUS | undefined,
 
   // Kesehatan
   mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT | undefined,
-  mataKatarak: MATA_KATARAK | undefined,
-  mataPeteregium: MATA_PETEREGIUM | undefined,
+  mataKatarak: YES_OR_NO | undefined,
+  mataPeteregium: YES_OR_NO | undefined,
+
+  kaki_X: YES_OR_NO | undefined,
+  kaki_O: YES_OR_NO | undefined,
+  kakiTelapakFlatDatar: YES_OR_NO | undefined,
+  kakiPesKavus: YES_OR_NO | undefined,
+  kakiVarises: YES_OR_NO | undefined,
 
   gigiOmpong: GIGI_OMPONG | undefined,
   gigiJumlah: GIGI_JUMLAH | undefined,
   gigiRapih: GIGI_RAPIH | undefined,
   gigiFraktur: GIGI_FRAKTUR | undefined,
-  gigiBerjejal: GIGI_BERJEJAL | undefined,
-  gigiOpenBite: GIGI_OPEN_BITE | undefined,
-  gigiOverBite: GIGI_OVER_BITE | undefined,
-  gigiCrossBite: GIGI_CROSS_BITE | undefined,
-  gigiImpaksi: GIGI_IMPAKSI | undefined,
-  gigiRusakBerlubang: GIGI_RUSAK_BERLUBANG | undefined,
-  gigiBerjamur: GIGI_BERJAMUR | undefined,
-  gigiBerjamurKuning: GIGI_BERJAMUR_KUNING | undefined,
-  gigiAbrasi: GIGI_ABRASI | undefined,
-  gigiPalsuLepasPasang: GIGI_PALSU_LEPAS_PASANG | undefined,
-  gigiBehel: GIGI_BEHEL | undefined,
-  gigiKelainanSendi: GIGI_KELAINAN_SENDI | undefined,
-  gigiTonggos: GIGI_TONGGOS | undefined,
-  gigiAbsesKistaTumor: GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH | undefined,
+  gigiBerjejal: YES_OR_NO | undefined,
+  gigiOpenBite: YES_OR_NO | undefined,
+  gigiOverBite: YES_OR_NO | undefined,
+  gigiCrossBite: YES_OR_NO | undefined,
+  gigiImpaksi: YES_OR_NO | undefined,
+  gigiRusakBerlubang: YES_OR_NO | undefined,
+  gigiBerjamur: YES_OR_NO | undefined,
+  gigiBerjamurKuning: YES_OR_NO | undefined,
+  gigiAbrasi: YES_OR_NO | undefined,
+  gigiPalsuLepasPasang: YES_OR_NO | undefined,
+  gigiBehel: YES_OR_NO | undefined,
+  gigiKelainanSendi: YES_OR_NO | undefined,
+  gigiTonggos: YES_OR_NO | undefined,
+  gigiAbsesKistaTumor: YES_OR_NO | undefined,
 
-  wajahBercakHitam: WAJAH_BERCAK_HITAM | undefined
+  wajahBercakHitam: YES_OR_NO | undefined
 ) {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY.UMUR, umur || "");
@@ -79,10 +67,17 @@ function useEffectSaveCheck(
     localStorage.setItem(LOCAL_STORAGE_KEY.BUTA_WARNA, butaWarna || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.MINUS, minus || "");
 
-    // Kesehatan Gigi
+    // Kesehatan Mata
     localStorage.setItem(LOCAL_STORAGE_KEY.MATA_RABUN_JAUH_DEKAT, mataRabunJauhDekat || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.MATA_KATARAK, mataKatarak || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.MATA_PETEREGIUM, mataPeteregium || "");
+
+    // Kesehatan Kaki
+    localStorage.setItem(LOCAL_STORAGE_KEY.KAKI_X, kaki_X || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.KAKI_O, kaki_O || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.KAKI_TELAPAK_FLAT_DATAR, kakiTelapakFlatDatar || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.KAKI_TELAPAK_KAKU_PES_KAVUS_BERBENTUK_CAKAR, kakiPesKavus || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.KAKI_VARISES, kakiVarises || "");
 
     // Kesehatan Gigi
     localStorage.setItem(LOCAL_STORAGE_KEY.GIGI_OMPONG, gigiOmpong || "");
@@ -121,6 +116,13 @@ function useEffectSaveCheck(
     mataRabunJauhDekat,
     mataKatarak,
     mataPeteregium,
+
+    // Kaki
+    kaki_X,
+    kaki_O,
+    kakiTelapakFlatDatar,
+    kakiPesKavus,
+    kakiVarises,
 
     // Kesehatan Gigi
     gigiOmpong,

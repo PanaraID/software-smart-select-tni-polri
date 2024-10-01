@@ -38,67 +38,61 @@ type AppContextType = {
   minus: MINUS | undefined;
   setMinus: (minus: MINUS) => void;
 
-  // Kesehatan
+  // Mata
   mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT | undefined;
   setMataRabunJauhDekat: (mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT) => void;
-
   mataKatarak: YES_OR_NO | undefined;
   setMataKatarak: (mataKatarak: YES_OR_NO) => void;
-
   mataPeteregium: YES_OR_NO | undefined;
   setMataPeteregium: (mataPeteregium: YES_OR_NO) => void;
 
+  // Kaki
+  kaki_X: YES_OR_NO | undefined;
+  setKaki_X: (kaki_X: YES_OR_NO) => void;
+  kaki_O: YES_OR_NO | undefined;
+  setKaki_O: (kaki_K: YES_OR_NO) => void;
+  kakiTelapakFlatDatar: YES_OR_NO | undefined;
+  setKakiTelapakFlatDatar: (kakiTelapakFlatDatar: YES_OR_NO) => void;
+  kakiPesKavus: YES_OR_NO | undefined;
+  setKakiPesKavus: (kakiPesKavus: YES_OR_NO) => void;
+  kakiVarises: YES_OR_NO | undefined;
+  setKakiVarises: (kakiVarises: YES_OR_NO) => void;
+
+  // Gigi
   gigiOmpong: GIGI_OMPONG | undefined;
   setGigiOmpong: (gigiOmpong: GIGI_OMPONG) => void;
-
   gigiJumlah: GIGI_JUMLAH | undefined;
   setGigiJumlah: (gigiJumlah: GIGI_JUMLAH) => void;
-
   gigiRapih: GIGI_RAPIH | undefined;
   setGigiRapih: (gigiRapih: GIGI_RAPIH) => void;
-
   gigiFraktur: GIGI_FRAKTUR | undefined;
   setGigiFraktur: (gigiFraktur: GIGI_FRAKTUR) => void;
-
   gigiBerjejal: YES_OR_NO | undefined;
   setGigiBerjejal: (gigiBerjejal: YES_OR_NO) => void;
-
   gigiOpenBite: YES_OR_NO | undefined;
   setGigiOpenBite: (gigiOpenBite: YES_OR_NO) => void;
-
   gigiOverBite: YES_OR_NO | undefined;
   setGigiOverBite: (gigiOverBite: YES_OR_NO) => void;
-
   gigiCrossBite: YES_OR_NO | undefined;
   setGigiCrossBite: (gigiCrossBite: YES_OR_NO) => void;
-
   gigiImpaksi: YES_OR_NO | undefined;
   setGigiImpaksi: (gigiImpaksi: YES_OR_NO) => void;
-
   gigiRusakBerlubang: YES_OR_NO | undefined;
   setGigiRusakBerlubang: (gigiRusakBerlubang: YES_OR_NO) => void;
-
   gigiBerjamur: YES_OR_NO | undefined;
   setGigiBerjamur: (gigiBerjamur: YES_OR_NO) => void;
-
   gigiBerjamurKuning: YES_OR_NO | undefined;
   setGigiBerjamurKuning: (gigiBerjamurKuning: YES_OR_NO) => void;
-
   gigiAbrasi: YES_OR_NO | undefined;
   setGigiAbrasi: (gigiAbrasi: YES_OR_NO) => void;
-
   gigiPalsuLepasPasang: YES_OR_NO | undefined;
   setGigiPalsuLepasPasang: (gigiPalsuLepasPasang: YES_OR_NO) => void;
-
   gigiBehel: YES_OR_NO | undefined;
   setGigiBehel: (gigiBehel: YES_OR_NO) => void;
-
   gigiKelainanSendi: YES_OR_NO | undefined;
   setGigiKelainanSendi: (gigiKelainanSendi: YES_OR_NO) => void;
-
   gigiTonggos: YES_OR_NO | undefined;
   setGigiTonggos: (gigiTonggos: YES_OR_NO) => void;
-
   gigiAbsesKistaTumor: YES_OR_NO | undefined;
   setGigiAbsesKistaTumor: (gigiAbsesKistaTumor: YES_OR_NO) => void;
 

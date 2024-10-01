@@ -20,6 +20,13 @@ import useStateMataRabunJauhDekat from "./hooks/kesehatan/mata/useStateMataRabun
 import useStateMataKatarak from "./hooks/kesehatan/mata/useStateMataKatarak";
 import useStateMataPeteregium from "./hooks/kesehatan/mata/useStateMataPeteregium";
 
+// useState kaki
+import useStateKaki_X from "./hooks/kesehatan/kaki/useStateKaki_X";
+import useStateKaki_O from "./hooks/kesehatan/kaki/useStateKaki_O";
+import useStateKakiTelapakFlatDatar from "./hooks/kesehatan/kaki/useStateKakiTelapakFlatDatar";
+import useStateKakiPesKavus from "./hooks/kesehatan/kaki/useStateKakiPesKavus";
+import useStateKakiVarises from "./hooks/kesehatan/kaki/useStateKakiVarises";
+
 // useState gigi
 import useStateGigiOmpong from "./hooks/kesehatan/gigi/useStateGigiOmpong";
 import useStateGigiJumlah from "./hooks/kesehatan/gigi/useStateGigiJumlah";
@@ -68,6 +75,13 @@ function App() {
   const [mataRabunJauhDekat, setMataRabunJauhDekat] = useStateMataRabunJauhDekat();
   const [mataKatarak, setMataKatarak] = useStateMataKatarak();
   const [mataPeteregium, setMataPeteregium] = useStateMataPeteregium();
+  
+  // Kaki
+  const [kaki_X, setKaki_X] = useStateKaki_X();
+  const [kaki_O, setKaki_O] = useStateKaki_O();
+  const [kakiTelapakFlatDatar, setKakiTelapakFlatDatar] = useStateKakiTelapakFlatDatar();
+  const [kakiPesKavus, setKakiPesKavus] = useStateKakiPesKavus();
+  const [kakiVarises, setKakiVarises] = useStateKakiVarises();
 
   // Gigi
   const [gigiOmpong, setGigiOmpong] = useStateGigiOmpong();
@@ -105,7 +119,15 @@ function App() {
     mataRabunJauhDekat,
     mataKatarak,
     mataPeteregium,
+
+    // Kaki
+    kaki_X,
+    kaki_O,
+    kakiTelapakFlatDatar,
+    kakiPesKavus,
+    kakiVarises,
     
+    // Gigi
     gigiOmpong,
     gigiJumlah,
     gigiRapih,
@@ -142,6 +164,23 @@ function App() {
 
     mataPeteregium,
     setMataPeteregium
+  }
+
+  const kesehatanKaki = {
+    kaki_X,
+    setKaki_X,
+
+    kaki_O,
+    setKaki_O,
+
+    kakiTelapakFlatDatar,
+    setKakiTelapakFlatDatar,
+
+    kakiPesKavus,
+    setKakiPesKavus,
+
+    kakiVarises,
+    setKakiVarises
   }
 
   const kesehatanGigi = {
@@ -223,6 +262,7 @@ function App() {
     setMinus,
 
     ...kesehatanMata,
+    ...kesehatanKaki,
     ...kesehatanGigi,
     
 

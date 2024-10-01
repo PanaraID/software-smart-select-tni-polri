@@ -35,7 +35,13 @@ enum LOCAL_STORAGE_KEY {
   GIGI_TONGGOS = "tni-polri-kesehatan-gigi-tonggos",
   GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH = "tni-polri-kesehatan-gigi-abses-kista-tumor-kelainan-kelenjar-ludah",
 
-  WAJAH_BERCAK_HITAM = "tni-polri-buta-kesehatan-wajah-bercak-hitam"
+  WAJAH_BERCAK_HITAM = "tni-polri-buta-kesehatan-wajah-bercak-hitam",
+
+  KAKI_X = "tni-polri-buta-kesehatan-kaki-x",
+  KAKI_O = "tni-polri-buta-kesehatan-kaki-o",
+  KAKI_TELAPAK_FLAT_DATAR = "tni-polri-buta-kesehatan-kaki-telapak-flat-datar",
+  KAKI_TELAPAK_KAKU_PES_KAVUS_BERBENTUK_CAKAR = "tni-polri-buta-kesehatan-kaki-telapak-kaku-pes-kavus-berbentuk-cakar",
+  KAKI_VARISES = "tni-polri-buta-kesehatan-kaki-varises"
 }
 
 export default LOCAL_STORAGE_KEY;

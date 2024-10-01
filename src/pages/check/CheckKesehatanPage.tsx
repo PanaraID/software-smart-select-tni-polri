@@ -21,7 +21,7 @@ function CheckKesehatanPage() {
     [PAGES.CHECK_WAJAH, "Wajah"],
     // [PAGES.CHECK_MATA, "Bagian Tangan"],
     // [PAGES.CHECK_MATA, "Tulang Punggung"],
-    // [PAGES.CHECK_MATA, "Bagian Kaki"],
+    [PAGES.CHECK_KAKI, "Bagian Kaki"],
     // [PAGES.CHECK_MATA, "Tes Bedah"],
     [PAGES.CHECK_GIGI, "Gigi"],
   ];

@@ -2,8 +2,10 @@ import PAGES from "../../finals/basic/PAGES";
 
 import CheckKesehatanPage from "../../pages/check/CheckKesehatanPage";
 import CheckKesehatanTambahanPage from "../../pages/check/CheckKesehatanTambahanPage";
+
 import CheckMataPage from "../../pages/check/CheckMataPage";
 import CheckWajahPage from "../../pages/check/CheckWajahPage";
+import CheckKakiPage from "../../pages/check/CheckKakiPage";
 import CheckGigiPage from "../../pages/check/CheckGigiPage";
 
 type PropsType = {
@@ -20,6 +22,8 @@ function ShowCheckPage(props: PropsType) {
         return <CheckMataPage />;
     case PAGES.CHECK_WAJAH:
       return <CheckWajahPage />;
+    case PAGES.CHECK_KAKI:
+      return <CheckKakiPage />;
     case PAGES.CHECK_GIGI:
       return <CheckGigiPage />;
   }
