@@ -20,6 +20,10 @@ import useStateMataRabunJauhDekat from "./hooks/kesehatan/mata/useStateMataRabun
 import useStateMataKatarak from "./hooks/kesehatan/mata/useStateMataKatarak";
 import useStateMataPeteregium from "./hooks/kesehatan/mata/useStateMataPeteregium";
 
+// useState bentuk kepala
+import useStateKepalaRiwayatBekasLukaOperasi from "./hooks/kesehatan/bagian-kepala/useStateKepalaRiwayatBekasLukaOperasi";
+import useStateKepalaBentuk from "./hooks/kesehatan/bagian-kepala/useStateKepalaBentuk";
+
 // useState kaki
 import useStateKaki_X from "./hooks/kesehatan/kaki/useStateKaki_X";
 import useStateKaki_O from "./hooks/kesehatan/kaki/useStateKaki_O";
@@ -75,6 +79,10 @@ function App() {
   const [mataRabunJauhDekat, setMataRabunJauhDekat] = useStateMataRabunJauhDekat();
   const [mataKatarak, setMataKatarak] = useStateMataKatarak();
   const [mataPeteregium, setMataPeteregium] = useStateMataPeteregium();
+
+  // Bentuk kepala
+  const [kepalaRiwayatBekasLukaOperasi, setKepalaRiwayatBekasLukaOperasi] = useStateKepalaRiwayatBekasLukaOperasi();
+  const [kepalaBentuk, setKepalaBentuk] = useStateKepalaBentuk();
   
   // Kaki
   const [kaki_X, setKaki_X] = useStateKaki_X();
@@ -120,6 +128,10 @@ function App() {
     mataKatarak,
     mataPeteregium,
 
+    // Bagian kepala
+    kepalaRiwayatBekasLukaOperasi,
+    kepalaBentuk,
+
     // Kaki
     kaki_X,
     kaki_O,
@@ -164,6 +176,14 @@ function App() {
 
     mataPeteregium,
     setMataPeteregium
+  }
+
+  const bagianKepala = {
+    kepalaRiwayatBekasLukaOperasi,
+    setKepalaRiwayatBekasLukaOperasi,
+
+    kepalaBentuk,
+    setKepalaBentuk
   }
 
   const kesehatanKaki = {
@@ -262,10 +282,10 @@ function App() {
     setMinus,
 
     ...kesehatanMata,
+    ...bagianKepala,
     ...kesehatanKaki,
     ...kesehatanGigi,
     
-
     wajahBercakHitam,
     setWajahBercakHitam,
   };

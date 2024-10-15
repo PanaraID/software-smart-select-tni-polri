@@ -7,6 +7,7 @@ import SEKOLAH from "../finals/SEKOLAH";
 import JURUSAN from "../finals/JURUSAN";
 import TINGGI_BADAN from "../finals/TINGGI_BADAN";
 import MINUS from "../finals/MINUS";
+import BENTUK_KEPALA from "../finals/kesehatan/bagian-kepala/BENTUK_KEPALA";
 
 import MATA_RABUN_JAUH_DEKAT from "../finals/kesehatan/mata/MATA_RABUN_JAUH_DEKAT";
 
@@ -45,6 +46,12 @@ type AppContextType = {
   setMataKatarak: (mataKatarak: YES_OR_NO) => void;
   mataPeteregium: YES_OR_NO | undefined;
   setMataPeteregium: (mataPeteregium: YES_OR_NO) => void;
+
+  // Bagian kepala
+  kepalaRiwayatBekasLukaOperasi: YES_OR_NO | undefined;
+  setKepalaRiwayatBekasLukaOperasi: (riwayatBekasLukaOperasi: YES_OR_NO) => void;
+  kepalaBentuk: BENTUK_KEPALA | undefined;
+  setKepalaBentuk: (kepalaBentuk: BENTUK_KEPALA) => void;
 
   // Kaki
   kaki_X: YES_OR_NO | undefined;

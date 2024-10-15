@@ -11,6 +11,8 @@ import MINUS from "../finals/MINUS";
 // Kesehatan Mata
 import MATA_RABUN_JAUH_DEKAT from "../finals/kesehatan/mata/MATA_RABUN_JAUH_DEKAT";
 
+import BENTUK_KEPALA from "../finals/kesehatan/bagian-kepala/BENTUK_KEPALA";
+
 // Kesehatan Gigi
 import GIGI_OMPONG from "../finals/kesehatan/gigi/GIGI_OMPONG";
 import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
@@ -31,6 +33,9 @@ function useEffectSaveCheck(
   mataRabunJauhDekat: MATA_RABUN_JAUH_DEKAT | undefined,
   mataKatarak: YES_OR_NO | undefined,
   mataPeteregium: YES_OR_NO | undefined,
+
+  kepalaRiwayatBekasLukaOperasi: YES_OR_NO | undefined,
+  kepalaBentuk: BENTUK_KEPALA | undefined,
 
   kaki_X: YES_OR_NO | undefined,
   kaki_O: YES_OR_NO | undefined,
@@ -71,6 +76,10 @@ function useEffectSaveCheck(
     localStorage.setItem(LOCAL_STORAGE_KEY.MATA_RABUN_JAUH_DEKAT, mataRabunJauhDekat || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.MATA_KATARAK, mataKatarak || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.MATA_PETEREGIUM, mataPeteregium || "");
+
+    // Bentuk kepala
+    localStorage.setItem(LOCAL_STORAGE_KEY.KEPALA_RIWAYAT_BEKAS_LUKA_OPERASI, kepalaRiwayatBekasLukaOperasi || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.KEPALA_BENTUK_KEPALA, kepalaBentuk || "");
 
     // Kesehatan Kaki
     localStorage.setItem(LOCAL_STORAGE_KEY.KAKI_X, kaki_X || "");
@@ -116,6 +125,10 @@ function useEffectSaveCheck(
     mataRabunJauhDekat,
     mataKatarak,
     mataPeteregium,
+
+    // Bentuk kepala
+    kepalaRiwayatBekasLukaOperasi,
+    kepalaBentuk,
 
     // Kaki
     kaki_X,

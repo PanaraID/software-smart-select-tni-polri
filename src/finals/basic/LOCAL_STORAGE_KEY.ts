@@ -14,6 +14,10 @@ enum LOCAL_STORAGE_KEY {
   MATA_KATARAK = "tni-polri-kesehatan-mata-katarak",
   MATA_PETEREGIUM = "tni-polri-kesehatan-mata-peteregium",
   MATA_RABUN_JAUH_DEKAT = "tni-polri-kesehatan-mata-rabun-jauh-dekat",
+
+  // Bentuk kepala
+  KEPALA_RIWAYAT_BEKAS_LUKA_OPERASI = "tni-polri-kesehatan-kepala-riwayat-bekas-luka-operasi",
+  KEPALA_BENTUK_KEPALA = "tni-polri-kesehatan-kepala-bentuk-kepala",
   
   // Gigi (Ada 18)
   GIGI_OMPONG = "tni-polri-kesehatan-gigi-ompong",
