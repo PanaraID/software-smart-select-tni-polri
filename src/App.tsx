@@ -71,6 +71,7 @@ import ShowResultPage from "./partials/app/ShowResultPage";
 import ShowRecommendationPage from "./partials/app/ShowRecommendationPage";
 
 import Footer from "./partials/Footer";
+import useStateHidungPatahTulang from "./hooks/kesehatan/hidung/useStateHidungPatahTulang";
 
 function App() {
   const [page, setPage] = useStatePage();
@@ -129,6 +130,7 @@ function App() {
   const [tanganPanjangSebelah, setTanganPanjangSebelah] = useStateTanganPanjangSebelah();
   const [tanganGemetarSaatDiluruskan, setTanganGemetarSaatDiluruskan] = useStateTanganGemetarSaatDiluruskan();
 
+  const [hidungPatahTulang, setHidungPatahTulang] = useStateHidungPatahTulang();
 
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
@@ -177,12 +179,15 @@ function App() {
     gigiAbsesKistaTumor,
 
     wajahBercakHitam,
+
     tanganJariLeherAngsa,
     tanganKelainanBoutonniere,
     tanganKelainanDopuytren,
     tanganBerkeringat,
     tanganPanjangSebelah,
-    tanganGemetarSaatDiluruskan
+    tanganGemetarSaatDiluruskan,
+
+    hidungPatahTulang
   );
 
   function setMyPage(data: PAGES) {
@@ -332,6 +337,9 @@ function App() {
     
     wajahBercakHitam,
     setWajahBercakHitam,
+
+    hidungPatahTulang,
+    setHidungPatahTulang
   };
 
   return (

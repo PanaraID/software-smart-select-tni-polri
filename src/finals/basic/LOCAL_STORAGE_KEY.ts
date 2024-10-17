@@ -48,6 +48,8 @@ enum LOCAL_STORAGE_KEY {
   TANGAN_PANJANG_SEBELAH = "tni-polri-kesehatan-tangan-panjang-sebelah",
   TANGAN_GEMETAR_SAAT_DILURUSKAN = "tni-polri-kesehatan-tangan-gemetar-saat-diluruskan",
 
+  HIDUNG_PATAH_TULANG = "tni-polri-kesehatan-hidung-patah-tulang",
+
   KAKI_X = "tni-polri-kesehatan-kaki-x",
   KAKI_O = "tni-polri-kesehatan-kaki-o",
   KAKI_TELAPAK_FLAT_DATAR = "tni-polri-kesehatan-kaki-telapak-flat-datar",

@@ -70,6 +70,8 @@ function useEffectSaveCheck(
   tanganBerkeringat: YES_OR_NO | undefined,
   tanganPanjangSebelah: YES_OR_NO | undefined,
   tanganGemetarSaatDiluruskan: YES_OR_NO | undefined,
+
+  hidungPatahTulang: YES_OR_NO | undefined
 ) {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY.UMUR, umur || "");
@@ -127,6 +129,9 @@ function useEffectSaveCheck(
     localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_TELAPAK_TANGAN_BERKERINGAT, tanganBerkeringat || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_PANJANG_SEBELAH, tanganPanjangSebelah || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_GEMETAR_SAAT_DILURUSKAN, tanganGemetarSaatDiluruskan || "");
+
+    // Hidung
+    localStorage.setItem(LOCAL_STORAGE_KEY.HIDUNG_PATAH_TULANG, hidungPatahTulang || "");
   }, [
     // Basic
     umur,
@@ -180,7 +185,9 @@ function useEffectSaveCheck(
     tanganKelainanDopuytren,
     tanganBerkeringat,
     tanganPanjangSebelah,
-    tanganGemetarSaatDiluruskan
+    tanganGemetarSaatDiluruskan,
+
+    hidungPatahTulang
   ]);
 }
 
