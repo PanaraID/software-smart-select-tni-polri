@@ -61,6 +61,11 @@ import useStateTanganBerkeringat from "./hooks/kesehatan/bagian-tangan/useStateT
 import useStateTanganPanjangSebelah from "./hooks/kesehatan/bagian-tangan/useStateTanganPanjangSebelah";
 import useStateTanganGemetarSaatDiluruskan from "./hooks/kesehatan/bagian-tangan/useStateTanganGemetarSaatDiluruskan";
 
+// useState punggung
+import useStatePunggungLordosis from "./hooks/kesehatan/punggung/useStatePunggungLordosis";
+import useStatePunggungKifosis from "./hooks/kesehatan/punggung/useStatePunggungKifosis";
+import useStatePunggungSkoliosis from "./hooks/kesehatan/punggung/useStatePunggungSkoliosis";
+
 // useEffect
 import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage";
 import useEffectSaveCheck from "./hooks/useEffectSaveCheck";
@@ -132,6 +137,11 @@ function App() {
 
   const [hidungPatahTulang, setHidungPatahTulang] = useStateHidungPatahTulang();
 
+  // Bagian punggung
+  const [punggungLordosis, setPunggungLordosis] = useStatePunggungLordosis();
+  const [punggungKifosis, setPunggungKifosis] = useStatePunggungKifosis();
+  const [punggungSkoliosis, setPunggungSkoliosis] = useStatePunggungSkoliosis();
+
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
   useEffectSaveCheck(
@@ -187,7 +197,11 @@ function App() {
     tanganPanjangSebelah,
     tanganGemetarSaatDiluruskan,
 
-    hidungPatahTulang
+    hidungPatahTulang,
+
+    punggungLordosis,
+    punggungKifosis,
+    punggungSkoliosis
   );
 
   function setMyPage(data: PAGES) {
@@ -307,6 +321,17 @@ function App() {
     setTanganGemetarSaatDiluruskan,
   }
 
+  const kesehatanPunggung = {
+    punggungLordosis,
+    setPunggungLordosis,
+
+    punggungKifosis,
+    setPunggungKifosis,
+
+    punggungSkoliosis,
+    setPunggungSkoliosis
+  }
+
   const context: AppContextType = {
     page,
     setPage: setMyPage,
@@ -334,6 +359,7 @@ function App() {
     ...kesehatanKaki,
     ...kesehatanGigi,
     ...kesehatanTangan,
+    ...kesehatanPunggung,
     
     wajahBercakHitam,
     setWajahBercakHitam,

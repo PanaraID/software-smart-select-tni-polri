@@ -20,7 +20,7 @@ function CheckKesehatanPage() {
     [PAGES.CHECK_BAGIAN_HIDUNG, "Bagian Hidung"],
     [PAGES.CHECK_WAJAH, "Wajah"],
     [PAGES.CHECK_BAGIAN_TANGAN, "Bagian Tangan"],
-    // [PAGES.CHECK_MATA, "Tulang Punggung"],
+    [PAGES.CHECK_BAGIAN_PUNGGUNG, "Tulang Punggung"],
     [PAGES.CHECK_KAKI, "Bagian Kaki"],
     // [PAGES.CHECK_BEDAH, "Tes Bedah"],
     [PAGES.CHECK_GIGI, "Gigi"],

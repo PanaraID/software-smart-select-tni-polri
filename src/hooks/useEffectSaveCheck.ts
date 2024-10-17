@@ -71,7 +71,11 @@ function useEffectSaveCheck(
   tanganPanjangSebelah: YES_OR_NO | undefined,
   tanganGemetarSaatDiluruskan: YES_OR_NO | undefined,
 
-  hidungPatahTulang: YES_OR_NO | undefined
+  hidungPatahTulang: YES_OR_NO | undefined,
+
+  punggungLordosis: YES_OR_NO | undefined,
+  punggungKifosis: YES_OR_NO | undefined,
+  punggungSkoliosis: YES_OR_NO | undefined
 ) {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY.UMUR, umur || "");
@@ -132,6 +136,11 @@ function useEffectSaveCheck(
 
     // Hidung
     localStorage.setItem(LOCAL_STORAGE_KEY.HIDUNG_PATAH_TULANG, hidungPatahTulang || "");
+    
+    // Punggung
+    localStorage.setItem(LOCAL_STORAGE_KEY.PUNGGUNG_LORDOSIS, punggungLordosis || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.PUNGGUNG_KIFOSIS, punggungKifosis || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.PUNGGUNG_SKOLIOSIS, punggungSkoliosis || "");
   }, [
     // Basic
     umur,
@@ -187,7 +196,11 @@ function useEffectSaveCheck(
     tanganPanjangSebelah,
     tanganGemetarSaatDiluruskan,
 
-    hidungPatahTulang
+    hidungPatahTulang,
+
+    punggungLordosis,
+    punggungKifosis,
+    punggungSkoliosis
   ]);
 }
 

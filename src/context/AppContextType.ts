@@ -123,6 +123,14 @@ type AppContextType = {
   // Hidung
   hidungPatahTulang: YES_OR_NO | undefined;
   setHidungPatahTulang: (hidungPatahTulang: YES_OR_NO) => void;
+
+  // Punggung
+  punggungLordosis: YES_OR_NO | undefined;
+  setPunggungLordosis: (punggungLordosis: YES_OR_NO) => void;
+  punggungKifosis: YES_OR_NO | undefined;
+  setPunggungKifosis: (punggungKifosis: YES_OR_NO) => void;
+  punggungSkoliosis: YES_OR_NO | undefined;
+  setPunggungSkoliosis: (punggungSkoliosis: YES_OR_NO) => void;
 };
 
 export default AppContextType;
