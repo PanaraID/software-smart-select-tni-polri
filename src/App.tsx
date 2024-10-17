@@ -53,6 +53,14 @@ import useStateGigiImpaksi from "./hooks/kesehatan/gigi/useStateGigiImpaksi";
 
 import useStateWajahBercakHitam from "./hooks/kesehatan/wajah/useStateWajahBercakHitam";
 
+// useState tangan
+import useStateTanganJariLeherAngsa from "./hooks/kesehatan/bagian-tangan/useStateTanganJariLeherAngsa";
+import useStateTanganKelaiananBoutonniere from "./hooks/kesehatan/bagian-tangan/useStateTanganKelaiananBoutonniere";
+import useStateTanganKelainanDopuytren from "./hooks/kesehatan/bagian-tangan/useStateTanganKelainanDopuytren";
+import useStateTanganBerkeringat from "./hooks/kesehatan/bagian-tangan/useStateTanganBerkeringat";
+import useStateTanganPanjangSebelah from "./hooks/kesehatan/bagian-tangan/useStateTanganPanjangSebelah";
+import useStateTanganGemetarSaatDiluruskan from "./hooks/kesehatan/bagian-tangan/useStateTanganGemetarSaatDiluruskan";
+
 // useEffect
 import useEffectSaveActivePage from "./hooks/basic/useEffectSaveActivePage";
 import useEffectSaveCheck from "./hooks/useEffectSaveCheck";
@@ -113,6 +121,15 @@ function App() {
 
   const [wajahBercakHitam, setWajahBercakHitam] = useStateWajahBercakHitam();
 
+  // Bagian tangan
+  const [tanganJariLeherAngsa, setTanganJariLeherAngsa] = useStateTanganJariLeherAngsa();
+  const [tanganKelainanBoutonniere, setTanganKelainanBoutonniere] = useStateTanganKelaiananBoutonniere();
+  const [tanganKelainanDopuytren, setTanganKelainanDopuytren] = useStateTanganKelainanDopuytren();
+  const [tanganBerkeringat, setTanganBerkeringat] = useStateTanganBerkeringat();
+  const [tanganPanjangSebelah, setTanganPanjangSebelah] = useStateTanganPanjangSebelah();
+  const [tanganGemetarSaatDiluruskan, setTanganGemetarSaatDiluruskan] = useStateTanganGemetarSaatDiluruskan();
+
+
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
   useEffectSaveCheck(
@@ -159,7 +176,13 @@ function App() {
     gigiTonggos,
     gigiAbsesKistaTumor,
 
-    wajahBercakHitam
+    wajahBercakHitam,
+    tanganJariLeherAngsa,
+    tanganKelainanBoutonniere,
+    tanganKelainanDopuytren,
+    tanganBerkeringat,
+    tanganPanjangSebelah,
+    tanganGemetarSaatDiluruskan
   );
 
   function setMyPage(data: PAGES) {
@@ -259,6 +282,26 @@ function App() {
     setGigiAbsesKistaTumor
   }
 
+  const kesehatanTangan = {
+    tanganJariLeherAngsa,
+    setTanganJariLeherAngsa,
+  
+    tanganKelainanBoutonniere,
+    setTanganKelainanBoutonniere,
+  
+    tanganKelainanDopuytren,
+    setTanganKelainanDopuytren,
+  
+    tanganBerkeringat,
+    setTanganBerkeringat,
+  
+    tanganPanjangSebelah,
+    setTanganPanjangSebelah,
+  
+    tanganGemetarSaatDiluruskan,
+    setTanganGemetarSaatDiluruskan,
+  }
+
   const context: AppContextType = {
     page,
     setPage: setMyPage,
@@ -285,6 +328,7 @@ function App() {
     ...bagianKepala,
     ...kesehatanKaki,
     ...kesehatanGigi,
+    ...kesehatanTangan,
     
     wajahBercakHitam,
     setWajahBercakHitam,

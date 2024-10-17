@@ -105,6 +105,20 @@ type AppContextType = {
 
   wajahBercakHitam: YES_OR_NO | undefined;
   setWajahBercakHitam: (wajahBercakHitam: YES_OR_NO) => void;
+
+  // Kesehatan Tangan
+  tanganJariLeherAngsa: YES_OR_NO | undefined;
+  setTanganJariLeherAngsa: (tanganJariLeherAngsa: YES_OR_NO) => void;
+  tanganKelainanBoutonniere: YES_OR_NO | undefined;
+  setTanganKelainanBoutonniere: (tanganKelainanBoutonniere: YES_OR_NO) => void;
+  tanganKelainanDopuytren: YES_OR_NO | undefined;
+  setTanganKelainanDopuytren: (tanganKelainanDopuytren: YES_OR_NO) => void;
+  tanganBerkeringat: YES_OR_NO | undefined;
+  setTanganBerkeringat: (tanganBerkeringat: YES_OR_NO) => void;
+  tanganPanjangSebelah: YES_OR_NO | undefined;
+  setTanganPanjangSebelah: (tanganPanjangSebelah: YES_OR_NO) => void;
+  tanganGemetarSaatDiluruskan: YES_OR_NO | undefined;
+  setTanganGemetarSaatDiluruskan: (tanganGemetarSaatDiluruskan: YES_OR_NO) => void;
 };
 
 export default AppContextType;

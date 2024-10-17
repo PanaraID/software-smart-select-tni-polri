@@ -39,13 +39,20 @@ enum LOCAL_STORAGE_KEY {
   GIGI_TONGGOS = "tni-polri-kesehatan-gigi-tonggos",
   GIGI_ABSES_KISTA_TUMOR_KELAINAN_KELENJAR_LUDAH = "tni-polri-kesehatan-gigi-abses-kista-tumor-kelainan-kelenjar-ludah",
 
-  WAJAH_BERCAK_HITAM = "tni-polri-buta-kesehatan-wajah-bercak-hitam",
+  WAJAH_BERCAK_HITAM = "tni-polri-kesehatan-wajah-bercak-hitam",
 
-  KAKI_X = "tni-polri-buta-kesehatan-kaki-x",
-  KAKI_O = "tni-polri-buta-kesehatan-kaki-o",
-  KAKI_TELAPAK_FLAT_DATAR = "tni-polri-buta-kesehatan-kaki-telapak-flat-datar",
-  KAKI_TELAPAK_KAKU_PES_KAVUS_BERBENTUK_CAKAR = "tni-polri-buta-kesehatan-kaki-telapak-kaku-pes-kavus-berbentuk-cakar",
-  KAKI_VARISES = "tni-polri-buta-kesehatan-kaki-varises"
+  TANGAN_JARI_LEHER_ANGSA = "tni-polri-kesehatan-tangan-jari-leher-angsa",
+  TANGAN_KELAINAN_BOUTONNIERE = "tni-polri-kesehatan-tangan-kelainan-boutonniere",
+  TANGAN_KELAINAN_DOPUYTREN = "tni-polri-kesehatan-tangan-kelainan-dopuytren",
+  TANGAN_TELAPAK_TANGAN_BERKERINGAT = "tni-polri-kesehatan-tangan-telapak-tangan-berkeringat",
+  TANGAN_PANJANG_SEBELAH = "tni-polri-kesehatan-tangan-panjang-sebelah",
+  TANGAN_GEMETAR_SAAT_DILURUSKAN = "tni-polri-kesehatan-tangan-gemetar-saat-diluruskan",
+
+  KAKI_X = "tni-polri-kesehatan-kaki-x",
+  KAKI_O = "tni-polri-kesehatan-kaki-o",
+  KAKI_TELAPAK_FLAT_DATAR = "tni-polri-kesehatan-kaki-telapak-flat-datar",
+  KAKI_TELAPAK_KAKU_PES_KAVUS_BERBENTUK_CAKAR = "tni-polri-kesehatan-kaki-telapak-kaku-pes-kavus-berbentuk-cakar",
+  KAKI_VARISES = "tni-polri-kesehatan-kaki-varises"
 }
 
 export default LOCAL_STORAGE_KEY;

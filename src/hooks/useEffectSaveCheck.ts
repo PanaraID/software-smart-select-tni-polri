@@ -62,7 +62,14 @@ function useEffectSaveCheck(
   gigiTonggos: YES_OR_NO | undefined,
   gigiAbsesKistaTumor: YES_OR_NO | undefined,
 
-  wajahBercakHitam: YES_OR_NO | undefined
+  wajahBercakHitam: YES_OR_NO | undefined,
+
+  tanganJariLeherAngsa: YES_OR_NO | undefined,
+  tanganKelainanBoutonniere: YES_OR_NO | undefined,
+  tanganKelainanDopuytren: YES_OR_NO | undefined,
+  tanganBerkeringat: YES_OR_NO | undefined,
+  tanganPanjangSebelah: YES_OR_NO | undefined,
+  tanganGemetarSaatDiluruskan: YES_OR_NO | undefined,
 ) {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY.UMUR, umur || "");
@@ -112,6 +119,14 @@ function useEffectSaveCheck(
       LOCAL_STORAGE_KEY.WAJAH_BERCAK_HITAM,
       wajahBercakHitam || ""
     );
+
+    // Kesehatan Tangan
+    localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_JARI_LEHER_ANGSA, tanganJariLeherAngsa || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_KELAINAN_BOUTONNIERE, tanganKelainanBoutonniere || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_KELAINAN_DOPUYTREN, tanganKelainanDopuytren || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_TELAPAK_TANGAN_BERKERINGAT, tanganBerkeringat || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_PANJANG_SEBELAH, tanganPanjangSebelah || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.TANGAN_GEMETAR_SAAT_DILURUSKAN, tanganGemetarSaatDiluruskan || "");
   }, [
     // Basic
     umur,
@@ -158,6 +173,14 @@ function useEffectSaveCheck(
     gigiAbsesKistaTumor,
 
     wajahBercakHitam,
+
+    // Kesehatan tangan
+    tanganJariLeherAngsa,
+    tanganKelainanBoutonniere,
+    tanganKelainanDopuytren,
+    tanganBerkeringat,
+    tanganPanjangSebelah,
+    tanganGemetarSaatDiluruskan
   ]);
 }
 
