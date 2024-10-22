@@ -19,6 +19,9 @@ import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
 
+import JUMLAH_TESTIS from "../finals/kesehatan/lainnya/JUMLAH_TESTIS";
+import KONDISI_ALAT_REPRODUKSI from "../finals/kesehatan/lainnya/KONDISI_ALAT_REPRODUKSI";
+
 import LOCAL_STORAGE_KEY from "../finals/basic/LOCAL_STORAGE_KEY";
 
 function useEffectSaveCheck(
@@ -78,7 +81,13 @@ function useEffectSaveCheck(
 
   punggungLordosis: YES_OR_NO | undefined,
   punggungKifosis: YES_OR_NO | undefined,
-  punggungSkoliosis: YES_OR_NO | undefined
+  punggungSkoliosis: YES_OR_NO | undefined,
+
+  ambeyen: YES_OR_NO | undefined,
+  varikokel: YES_OR_NO | undefined,
+  herniaScrotalis: YES_OR_NO | undefined,
+  jumlahTestis: JUMLAH_TESTIS | undefined,
+  kondisiAlatReproduksi: KONDISI_ALAT_REPRODUKSI | undefined,
 ) {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY.UMUR, umur || "");
@@ -148,6 +157,12 @@ function useEffectSaveCheck(
     localStorage.setItem(LOCAL_STORAGE_KEY.PUNGGUNG_LORDOSIS, punggungLordosis || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.PUNGGUNG_KIFOSIS, punggungKifosis || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.PUNGGUNG_SKOLIOSIS, punggungSkoliosis || "");
+    
+    localStorage.setItem(LOCAL_STORAGE_KEY.AMBEYEN, ambeyen || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.VARIKOKEL, varikokel || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.HERNIA_SCROTALIS, herniaScrotalis || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.JUMLAH_TESTIS, jumlahTestis || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.KONDISI_ALAT_REPRODUKSI, kondisiAlatReproduksi || "");
   }, [
     // Basic
     umur,
@@ -210,7 +225,13 @@ function useEffectSaveCheck(
 
     punggungLordosis,
     punggungKifosis,
-    punggungSkoliosis
+    punggungSkoliosis,
+
+    ambeyen,
+    varikokel,
+    herniaScrotalis,
+    jumlahTestis,
+    kondisiAlatReproduksi,
   ]);
 }
 

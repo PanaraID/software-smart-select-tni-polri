@@ -16,6 +16,9 @@ import GIGI_JUMLAH from "../finals/kesehatan/gigi/GIGI_JUMLAH";
 import GIGI_RAPIH from "../finals/kesehatan/gigi/GIGI_RAPIH";
 import GIGI_FRAKTUR from "../finals/kesehatan/gigi/GIGI_FRAKTUR";
 
+import JUMLAH_TESTIS from "../finals/kesehatan/lainnya/JUMLAH_TESTIS";
+import KONDISI_ALAT_REPRODUKSI from "../finals/kesehatan/lainnya/KONDISI_ALAT_REPRODUKSI";
+
 type AppContextType = {
   // Basic
   page: PAGES;
@@ -137,6 +140,18 @@ type AppContextType = {
   setPunggungKifosis: (punggungKifosis: YES_OR_NO) => void;
   punggungSkoliosis: YES_OR_NO | undefined;
   setPunggungSkoliosis: (punggungSkoliosis: YES_OR_NO) => void;
+
+  // Lainnya
+  ambeyen: YES_OR_NO | undefined;
+  setAmbeyen: (ambeyen: YES_OR_NO) => void;
+  varikokel: YES_OR_NO | undefined;
+  setVarikokel: (varikokel: YES_OR_NO) => void;
+  herniaScrotalis: YES_OR_NO | undefined;
+  setHerniaScrotalis: (herniaScrotalis: YES_OR_NO) => void;
+  jumlahTestis: JUMLAH_TESTIS | undefined;
+  setJumlahTestis: (jumlahTestis: JUMLAH_TESTIS) => void;
+  kondisiAlatReproduksi: KONDISI_ALAT_REPRODUKSI | undefined;
+  setKondisiAlatReproduksi: (kondisiAlatReproduksi: KONDISI_ALAT_REPRODUKSI) => void;
 };
 
 export default AppContextType;

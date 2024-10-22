@@ -82,6 +82,12 @@ import ShowRecommendationPage from "./partials/app/ShowRecommendationPage";
 import Footer from "./partials/Footer";
 import useStateHidungPatahTulang from "./hooks/kesehatan/hidung/useStateHidungPatahTulang";
 
+import useStateAmbeyen from "./hooks/kesehatan/kesehatan-lainnya/useStateAmbeyen";
+import useStateVarikokel from "./hooks/kesehatan/kesehatan-lainnya/useStateVarikokel";
+import useStateHerniaScrotalis from "./hooks/kesehatan/kesehatan-lainnya/useStateHerniaScrotalis";
+import useStateJumlahTestis from "./hooks/kesehatan/kesehatan-lainnya/useStateJumlahTestis";
+import useStateKondisiAlatReproduksi from "./hooks/kesehatan/kesehatan-lainnya/useStateKondisiAlatReproduksi";
+
 function App() {
   const [page, setPage] = useStatePage();
 
@@ -150,6 +156,13 @@ function App() {
   const [punggungKifosis, setPunggungKifosis] = useStatePunggungKifosis();
   const [punggungSkoliosis, setPunggungSkoliosis] = useStatePunggungSkoliosis();
 
+  // Lainnya
+  const [ambeyen, setAmbeyen] = useStateAmbeyen();
+  const [varikokel, setVarikokel] = useStateVarikokel();
+  const [herniaScrotalis, setHerniaScrotalis] = useStateHerniaScrotalis();
+  const [jumlahTestis, setJumlahTestis] = useStateJumlahTestis();
+  const [kondisiAlatReproduksi, setKondisiAlatReproduksi] = useStateKondisiAlatReproduksi();
+
   // Menyimpan segala perubahan ke localStorage
   useEffectSaveActivePage(page);
   useEffectSaveCheck(
@@ -213,7 +226,13 @@ function App() {
 
     punggungLordosis,
     punggungKifosis,
-    punggungSkoliosis
+    punggungSkoliosis,
+    
+    ambeyen,
+    varikokel,
+    herniaScrotalis,
+    jumlahTestis,
+    kondisiAlatReproduksi,
   );
 
   function setMyPage(data: PAGES) {
@@ -352,6 +371,23 @@ function App() {
     setPunggungSkoliosis
   }
 
+  const kesehatanLainnya = {
+    ambeyen,
+    setAmbeyen,
+
+    varikokel,
+    setVarikokel,
+
+    herniaScrotalis,
+    setHerniaScrotalis,
+
+    jumlahTestis,
+    setJumlahTestis,
+
+    kondisiAlatReproduksi,
+    setKondisiAlatReproduksi
+  }
+
   const context: AppContextType = {
     page,
     setPage: setMyPage,
@@ -381,6 +417,7 @@ function App() {
     ...kesehatanTelinga,
     ...kesehatanTangan,
     ...kesehatanPunggung,
+    ...kesehatanLainnya,
     
     wajahBercakHitam,
     setWajahBercakHitam,

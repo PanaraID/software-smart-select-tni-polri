@@ -61,7 +61,14 @@ enum LOCAL_STORAGE_KEY {
   KAKI_O = "tni-polri-kesehatan-kaki-o",
   KAKI_TELAPAK_FLAT_DATAR = "tni-polri-kesehatan-kaki-telapak-flat-datar",
   KAKI_TELAPAK_KAKU_PES_KAVUS_BERBENTUK_CAKAR = "tni-polri-kesehatan-kaki-telapak-kaku-pes-kavus-berbentuk-cakar",
-  KAKI_VARISES = "tni-polri-kesehatan-kaki-varises"
+  KAKI_VARISES = "tni-polri-kesehatan-kaki-varises",
+
+  // Kesehatan tambahan
+  AMBEYEN = "tni-polri-kesehatan-ambeyen",
+  VARIKOKEL = "tni-polri-kesehatan-varikokel",
+  HERNIA_SCROTALIS = "tni-polri-kesehatan-hernia-scrotalis",
+  JUMLAH_TESTIS = "tni-polri-kesehatan-jumlah-testis",
+  KONDISI_ALAT_REPRODUKSI = "tni-polri-kesehatan-kondisi-alat-reproduksi",
 }
 
 export default LOCAL_STORAGE_KEY;
