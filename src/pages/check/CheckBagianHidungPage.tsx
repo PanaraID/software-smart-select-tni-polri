@@ -8,7 +8,7 @@ import YES_OR_NO from "../../finals/basic/YES_OR_NO";
 import InputChoice from "../../partials/InputChoice";
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 
-function CheckBagianHidung() {
+function CheckBagianHidungPage() {
   const {
     hidungPatahTulang,
     setHidungPatahTulang
@@ -30,4 +30,4 @@ function CheckBagianHidung() {
   );
 }
 
-export default CheckBagianHidung;
+export default CheckBagianHidungPage;

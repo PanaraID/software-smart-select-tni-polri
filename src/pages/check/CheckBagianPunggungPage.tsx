@@ -9,7 +9,7 @@ import InputChoice from "../../partials/InputChoice";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 
-function CheckBagianPunggung() {
+function CheckBagianPunggungPage() {
   const { 
     punggungLordosis,
     setPunggungLordosis,
@@ -49,4 +49,4 @@ function CheckBagianPunggung() {
   );
 }
 
-export default CheckBagianPunggung;
+export default CheckBagianPunggungPage;

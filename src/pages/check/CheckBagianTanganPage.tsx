@@ -9,7 +9,7 @@ import InputChoice from "../../partials/InputChoice";
 
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 
-function CheckBagianTangan() {
+function CheckBagianTanganPage() {
   const { 
     tanganJariLeherAngsa,
     setTanganJariLeherAngsa,
@@ -76,4 +76,4 @@ function CheckBagianTangan() {
   );
 }
 
-export default CheckBagianTangan;
+export default CheckBagianTanganPage;

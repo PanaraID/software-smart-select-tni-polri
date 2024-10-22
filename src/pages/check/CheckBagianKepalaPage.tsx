@@ -10,7 +10,7 @@ import InputChoice from "../../partials/InputChoice";
 import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation";
 import BENTUK_KEPALA from "../../finals/kesehatan/bagian-kepala/BENTUK_KEPALA";
 
-function CheckBagianKepala() {
+function CheckBagianKepalaPage() {
   const { 
     kepalaRiwayatBekasLukaOperasi,
     setKepalaRiwayatBekasLukaOperasi,
@@ -41,4 +41,4 @@ function CheckBagianKepala() {
   );
 }
 
-export default CheckBagianKepala;
+export default CheckBagianKepalaPage;
