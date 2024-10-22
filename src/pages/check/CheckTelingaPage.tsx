@@ -3,7 +3,6 @@ import { useContext } from "react";
 import AppContext from "../../context/AppContext";
 import Header from "../../partials/Header";
 
-import MATA_RABUN_JAUH_DEKAT from "../../finals/kesehatan/mata/MATA_RABUN_JAUH_DEKAT";
 import YES_OR_NO from "../../finals/basic/YES_OR_NO";
 
 import InputChoice from "../../partials/InputChoice";
@@ -12,37 +11,28 @@ import ButtonNavigation from "../../partials/button-navigation/ButtonNavigation"
 
 function CheckTelingaPage() {
   const { 
-    mataRabunJauhDekat,
-    setMataRabunJauhDekat,
+    telingaGendangRobek,
+    setTelingaGendangRobek,
 
-    mataKatarak,
-    setMataKatarak,
-
-    mataPeteregium,
-    setMataPeteregium
+    telingaLebarSebelah,
+    setTelingaLebarSebelah
   } = useContext(AppContext);
 
   return (
     <>
-      <Header text="Kesehatan Mata" />
+      <Header text="Kesehatan Telinga" />
 
       <InputChoice
-        title="Rabun Jauh/Dekat"
-        enumType={MATA_RABUN_JAUH_DEKAT}
-        selected={mataRabunJauhDekat}
-        setSelected={setMataRabunJauhDekat}
+        title="Gendang Telinga Robek"
+        enumType={YES_OR_NO}
+        selected={telingaGendangRobek}
+        setSelected={setTelingaGendangRobek}
       />
       <InputChoice
-        title="Mata Katarak"
+        title="Daun Telinga Lebar Sebelah"
         enumType={YES_OR_NO}
-        selected={mataKatarak}
-        setSelected={setMataKatarak}
-      />
-      <InputChoice
-        title="Mata Peteregium"
-        enumType={YES_OR_NO}
-        selected={mataPeteregium}
-        setSelected={setMataPeteregium}
+        selected={telingaLebarSebelah}
+        setSelected={setTelingaLebarSebelah}
       />
       
       <ButtonNavigation />

@@ -120,6 +120,12 @@ type AppContextType = {
   tanganGemetarSaatDiluruskan: YES_OR_NO | undefined;
   setTanganGemetarSaatDiluruskan: (tanganGemetarSaatDiluruskan: YES_OR_NO) => void;
 
+  // Telinga
+  telingaGendangRobek: YES_OR_NO | undefined;
+  setTelingaGendangRobek: (telingaGendangRobek: YES_OR_NO) => void;
+  telingaLebarSebelah: YES_OR_NO | undefined;
+  setTelingaLebarSebelah: (telingaLebarSebelah: YES_OR_NO) => void;
+
   // Hidung
   hidungPatahTulang: YES_OR_NO | undefined;
   setHidungPatahTulang: (hidungPatahTulang: YES_OR_NO) => void;

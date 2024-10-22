@@ -6,6 +6,7 @@ import CheckKesehatanTambahanPage from "../../pages/check/CheckKesehatanTambahan
 import CheckMataPage from "../../pages/check/CheckMataPage";
 import CheckBagianKepalaPage from "../../pages/check/CheckBagianKepalaPage";
 import CheckWajahPage from "../../pages/check/CheckWajahPage";
+import CheckTelingaPage from "../../pages/check/CheckTelingaPage";
 import CheckBagianTanganPage from "../../pages/check/CheckBagianTanganPage";
 import CheckBagianHidungPage from "../../pages/check/CheckBagianHidungPage";
 import CheckKakiPage from "../../pages/check/CheckKakiPage";
@@ -28,6 +29,8 @@ function ShowCheckPage(props: PropsType) {
       return <CheckBagianKepalaPage />;
     case PAGES.CHECK_WAJAH:
       return <CheckWajahPage />;
+    case PAGES.CHECK_TELINGA:
+      return <CheckTelingaPage />;      
     case PAGES.CHECK_BAGIAN_TANGAN:
       return <CheckBagianTanganPage />;
     case PAGES.CHECK_BAGIAN_HIDUNG:

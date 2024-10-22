@@ -16,7 +16,7 @@ function CheckKesehatanPage() {
   const list: [PAGES, string][] = [
     [PAGES.CHECK_MATA, "Mata"],
     [PAGES.CHECK_BAGIAN_KEPALA, "Bagian Kepala"],
-    // [PAGES.CHECK_MATA, "Telinga"],
+    [PAGES.CHECK_TELINGA, "Telinga"],
     [PAGES.CHECK_BAGIAN_HIDUNG, "Bagian Hidung"],
     [PAGES.CHECK_WAJAH, "Wajah"],
     [PAGES.CHECK_BAGIAN_TANGAN, "Bagian Tangan"],

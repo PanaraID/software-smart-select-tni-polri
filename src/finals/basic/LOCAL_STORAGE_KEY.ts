@@ -54,6 +54,9 @@ enum LOCAL_STORAGE_KEY {
   PUNGGUNG_KIFOSIS = "tni-polri-kesehatan-punggung-kifosis",
   PUNGGUNG_SKOLIOSIS = "tni-polri-kesehatan-punggung-skoliosis",
 
+  TELINGA_GENDANG_ROBEK = "tni-polri-kesehatan-telinga-gendang-robek",
+  TELINGA_LEBAR_SEBELAH = "tni-polri-kesehatan-telinga-lebar-sebelah",
+
   KAKI_X = "tni-polri-kesehatan-kaki-x",
   KAKI_O = "tni-polri-kesehatan-kaki-o",
   KAKI_TELAPAK_FLAT_DATAR = "tni-polri-kesehatan-kaki-telapak-flat-datar",

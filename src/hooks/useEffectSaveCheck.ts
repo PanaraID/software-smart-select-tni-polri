@@ -37,6 +37,9 @@ function useEffectSaveCheck(
   kepalaRiwayatBekasLukaOperasi: YES_OR_NO | undefined,
   kepalaBentuk: BENTUK_KEPALA | undefined,
 
+  telingaGendangRobek: YES_OR_NO | undefined,
+  telingaLebarSebelah: YES_OR_NO | undefined,
+
   kaki_X: YES_OR_NO | undefined,
   kaki_O: YES_OR_NO | undefined,
   kakiTelapakFlatDatar: YES_OR_NO | undefined,
@@ -93,6 +96,10 @@ function useEffectSaveCheck(
     // Bentuk kepala
     localStorage.setItem(LOCAL_STORAGE_KEY.KEPALA_RIWAYAT_BEKAS_LUKA_OPERASI, kepalaRiwayatBekasLukaOperasi || "");
     localStorage.setItem(LOCAL_STORAGE_KEY.KEPALA_BENTUK_KEPALA, kepalaBentuk || "");
+
+    // Kesehatan telinga
+    localStorage.setItem(LOCAL_STORAGE_KEY.TELINGA_GENDANG_ROBEK, telingaGendangRobek || "");
+    localStorage.setItem(LOCAL_STORAGE_KEY.TELINGA_LEBAR_SEBELAH, telingaLebarSebelah || "");
 
     // Kesehatan Kaki
     localStorage.setItem(LOCAL_STORAGE_KEY.KAKI_X, kaki_X || "");
@@ -158,6 +165,9 @@ function useEffectSaveCheck(
     // Bentuk kepala
     kepalaRiwayatBekasLukaOperasi,
     kepalaBentuk,
+
+    telingaGendangRobek,
+    telingaLebarSebelah,
 
     // Kaki
     kaki_X,

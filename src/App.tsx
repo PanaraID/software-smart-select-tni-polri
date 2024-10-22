@@ -61,6 +61,10 @@ import useStateTanganBerkeringat from "./hooks/kesehatan/bagian-tangan/useStateT
 import useStateTanganPanjangSebelah from "./hooks/kesehatan/bagian-tangan/useStateTanganPanjangSebelah";
 import useStateTanganGemetarSaatDiluruskan from "./hooks/kesehatan/bagian-tangan/useStateTanganGemetarSaatDiluruskan";
 
+// useState telinga
+import useStateTelingaGendangRobek from "./hooks/kesehatan/telinga/useStateTelingaGendangRobek";
+import useStatetelingaLebarSebelah from "./hooks/kesehatan/telinga/useStateTelingaLebarSebelah";
+
 // useState punggung
 import useStatePunggungLordosis from "./hooks/kesehatan/punggung/useStatePunggungLordosis";
 import useStatePunggungKifosis from "./hooks/kesehatan/punggung/useStatePunggungKifosis";
@@ -97,6 +101,10 @@ function App() {
   // Bentuk kepala
   const [kepalaRiwayatBekasLukaOperasi, setKepalaRiwayatBekasLukaOperasi] = useStateKepalaRiwayatBekasLukaOperasi();
   const [kepalaBentuk, setKepalaBentuk] = useStateKepalaBentuk();
+
+  // Telinga
+  const [telingaGendangRobek, setTelingaGendangRobek] = useStateTelingaGendangRobek();
+  const [telingaLebarSebelah, setTelingaLebarSebelah] = useStatetelingaLebarSebelah();
   
   // Kaki
   const [kaki_X, setKaki_X] = useStateKaki_X();
@@ -160,6 +168,10 @@ function App() {
     // Bagian kepala
     kepalaRiwayatBekasLukaOperasi,
     kepalaBentuk,
+
+    // Telinga
+    telingaGendangRobek,
+    telingaLebarSebelah,
 
     // Kaki
     kaki_X,
@@ -321,6 +333,14 @@ function App() {
     setTanganGemetarSaatDiluruskan,
   }
 
+  const kesehatanTelinga = {
+    telingaGendangRobek,
+    setTelingaGendangRobek,
+
+    telingaLebarSebelah,
+    setTelingaLebarSebelah,
+  }
+
   const kesehatanPunggung = {
     punggungLordosis,
     setPunggungLordosis,
@@ -358,6 +378,7 @@ function App() {
     ...bagianKepala,
     ...kesehatanKaki,
     ...kesehatanGigi,
+    ...kesehatanTelinga,
     ...kesehatanTangan,
     ...kesehatanPunggung,
     
