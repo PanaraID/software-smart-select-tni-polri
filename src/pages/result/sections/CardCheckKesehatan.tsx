@@ -9,6 +9,9 @@ import GIGI_OMPONG from "../../../finals/kesehatan/gigi/GIGI_OMPONG";
 import Filled from "../partials/Filled";
 import NotFilled from "../partials/NotFilled";
 
+import KesehatanKepala from "./partials/KesehatanKepala";
+import KesehatanMata from "./partials/KesehatanMata";
+
 function CardCheckKesehatan() {
   const { wajahBercakHitam, gigiOmpong } = useContext(AppContext);
 
@@ -26,6 +29,8 @@ function CardCheckKesehatan() {
       <Card.Header>Cek Kesehatan</Card.Header>
       <Card.Body>
         <ListGroup>
+          <KesehatanKepala />
+          <KesehatanMata />
           <ListGroupItem>
             Wajah Bercak Hitam: {theWajahBercakHitam ? <Filled text={theWajahBercakHitam} /> : <NotFilled />}
           </ListGroupItem>
