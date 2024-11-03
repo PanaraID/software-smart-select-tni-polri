@@ -9,6 +9,7 @@ import KesehatanTangan from "./partials/KesehatanTangan";
 import KesehatanTulangPunggung from "./partials/KesehatanTulangPunggung";
 import KesehatanKaki from "./partials/KesehatanKaki";
 import KesehatanLainnya from "./partials/KesehatanLainnya";
+import KesehatanGigi from "./partials/KesehatanGigi";
 
 function CardCheckKesehatan() {
   return (
@@ -25,6 +26,7 @@ function CardCheckKesehatan() {
           <KesehatanTulangPunggung />
           <KesehatanKaki />
           <KesehatanLainnya />
+          <KesehatanGigi />
         </ListGroup>
       </Card.Body>
     </Card>
