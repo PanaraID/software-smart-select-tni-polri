@@ -12,11 +12,11 @@ function ResultPage() {
 
       {/* Menampilkan data umum */}
       <CardDataGeneral />
-
       <div className="my-2" />
 
       {/* Menampilkan cek kesehatan */}
       <CardCheckKesehatan />
+      <div className="my-2" />
 
       {/* Menampilkan rekomendasi */}
       <CardRecommendation />
