@@ -7,21 +7,15 @@ type PropsType<T extends { [key: string]: string }> = {
   optionTitle?: string;
   enumType: T;
 
-  selected: keyof T | null;
-  setSelected: (data: keyof T | null) => void;
+  selected: any;
+  setSelected: (data: any) => void;
 };
 
-function InputChoice<T extends { [key: string]: string }>({
-  title,
-  enumType,
-  optionTitle,
-  label,
-  selected,
-  setSelected,
-}: PropsType<T>) {
-  
+function InputChoice<T extends { [key: string]: string }>(props: PropsType<T>) {
+  const { title, enumType, optionTitle, label, selected, setSelected } = props;
+
   function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    const value = event.target.value as keyof T;
+    const value: string = (event.target.value as keyof T).toString();
     setSelected(value); // Pass the key to setSelected
   }
 
@@ -33,14 +27,14 @@ function InputChoice<T extends { [key: string]: string }>({
 
   return (
     <section>
-      {title && <span>{title}</span>}
+      <span>{title}</span>
       <Form.Select
-        aria-label={label ?? "Masukkan pilihan anda!"}
+        aria-label={label ? label : "Masukkan pilihan anda!"}
         onChange={handleChange}
         value={selected?.toString() || ""} // Set the initial value based on selected
       >
         <option value="">
-          {optionTitle ?? "Masukkan pilihan anda!"}
+          {optionTitle ? optionTitle : "Masukkan pilihan anda!"}
         </option>
         {options.map(({ key, label }, index) => (
           <option key={index} value={key.toString()}>
