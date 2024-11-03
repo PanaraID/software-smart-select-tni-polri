@@ -1,10 +1,14 @@
 import { Accordion, Card } from "react-bootstrap";
 
+import MatraPolriBintara from "../matra/MatraPolriBintara";
+
 export default function CardRecommendation() {
   return (
     <Card>
       <Card.Header>Hasil Rekomendasi</Card.Header>
       <Card.Body>
+        <MatraPolriBintara />
+
         <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header>INSTANSI A</Accordion.Header>

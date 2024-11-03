@@ -77,7 +77,6 @@ import useEffectSaveCheck from "./hooks/useEffectSaveCheck";
 import ShowBasicPage from "./partials/app/ShowBasicPage";
 import ShowCheckPage from "./partials/app/ShowCheckPage";
 import ShowResultPage from "./partials/app/ShowResultPage";
-import ShowRecommendationPage from "./partials/app/ShowRecommendationPage";
 
 import Footer from "./partials/Footer";
 import useStateHidungPatahTulang from "./hooks/kesehatan/hidung/useStateHidungPatahTulang";
@@ -433,7 +432,6 @@ function App() {
           <ShowBasicPage page={page} />
           <ShowCheckPage page={page} />
           <ShowResultPage page={page} />
-          <ShowRecommendationPage page={page} />
         </AppContext.Provider>
       </main>
       <Footer />
