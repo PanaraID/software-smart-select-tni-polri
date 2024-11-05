@@ -1,10 +1,11 @@
+import "./CardRecommendation.css";
+
 import { useContext } from "react";
 import AppContext from "../../../context/AppContext";
 
 import PAGES from "../../../finals/basic/PAGES";
-import MATRA from "../../../finals/MATRA";
+// import MATRA from "../../../finals/MATRA";
 import { ListGroup, Card } from "react-bootstrap";
-import "./CardRecommendation.css";
 
 type PropsType = {
   title: string;
@@ -22,8 +23,8 @@ function ItemOfCardRecommendation(props: PropsType) {
 
 export default function CardRecommendation() {
   return (
-    <Card className="card-custom">
-      <Card.Header className="card-header-custom">Hasil Rekomendasi</Card.Header>
+    <Card id="card-custom">
+      <Card.Header id="card-header-custom">Hasil Rekomendasi</Card.Header>
       <Card.Body style={{ padding: "0" }}>
         <ListGroup variant="flush">
           <ItemOfCardRecommendation title="POLRI TAMTAMA" action={PAGES.MATRA_PA_PK_TNI} />
