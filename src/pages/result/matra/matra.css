@@ -1,0 +1,19 @@
+#matra .head, #matra .content {
+  border: .5px solid black;
+  margin: 2.5px;
+  padding: 5px;
+}
+
+#matra .sect {
+  width: 100%;
+  display: flex;
+}
+
+#matra .sect .head {
+  flex: 1;
+  background-color: greenyellow;
+}
+
+#matra .sect .content {
+  flex: 4;
+}

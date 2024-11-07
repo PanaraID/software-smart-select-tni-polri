@@ -4,7 +4,6 @@ import { useContext } from "react";
 import AppContext from "../../../context/AppContext";
 
 import PAGES from "../../../finals/basic/PAGES";
-// import MATRA from "../../../finals/MATRA";
 import { ListGroup, Card } from "react-bootstrap";
 
 type PropsType = {
