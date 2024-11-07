@@ -28,6 +28,22 @@ export default function CardRecommendation() {
       <Card.Body style={{ padding: "0" }}>
         <ListGroup variant="flush">
           <ItemOfCardRecommendation title="POLRI TAMTAMA" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="AKMIL" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="AAU" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="AAL" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="BINTARA TNI AD" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="BINTARA TNI AL" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="BINTARA TNI AU" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="TAMTAMA TNI AD" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="TAMTAMA TNI AL" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="TAMTAMA TNI AU" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="AKPOL" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="SIPSS POLRI" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="BINTARA POLRI" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="TAMTAMA POLRI" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="BAKOMSUS TENAGA KESEHATAN" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="BAKOMSUS KEHUMASAN TI" action={PAGES.MATRA_PA_PK_TNI} />
+          <ItemOfCardRecommendation title="BAKOMSUS HUKUM" action={PAGES.MATRA_PA_PK_TNI} />
         </ListGroup>
       </Card.Body>
     </Card>
